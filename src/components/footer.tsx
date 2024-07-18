@@ -36,7 +36,7 @@ function Footer() {
           <div><a className="font-semibold text-2xl leading-9 text-white" href="#">الأحداث</a></div>
           <div><a className="font-semibold text-2xl leading-9 text-white" href="#">الوظائف</a></div>
           <div><a className="font-semibold text-2xl leading-9 text-white" href="#">تواصل معنا</a></div>
-      </div>
+        </div>
 
       </div>
     </footer>

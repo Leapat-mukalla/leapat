@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic as GFont } from "next/font/google";
-
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";

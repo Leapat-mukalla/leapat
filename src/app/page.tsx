@@ -1,9 +1,10 @@
 
 import Svg from '../../src/components/Svg';
+import Partners from '../../src/components/partners';
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center">
+    <main className="">
       <div className="flex flex-col items-center space-y-2 text-center">
         <div>
           <Svg src="leapat.svg" />
@@ -13,6 +14,10 @@ export default function Home() {
             قفزة نحو الابداع
           </span>
         </div>
+      </div>
+
+      <div>
+        <Partners />
       </div>
     </main>
   );
