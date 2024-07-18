@@ -1,16 +1,13 @@
 
-import Svg from '../../src/components/Svg';
-import Partners from '../../src/components/partners';
+import Partners from '@/components/partners';
 
 export default function Home() {
   return (
     <main className="">
       <div className="flex flex-col items-center space-y-2 text-center">
+        <div></div>
         <div>
-          <Svg src="leapat.svg" />
-        </div>
-        <div>
-          <span className="leading-[120px] text-[80px] font-semibold align-right text-white custom-underline">
+          <span className="align-right custom-underline text-[80px] font-semibold leading-[120px] text-white">
             قفزة نحو الابداع
           </span>
         </div>

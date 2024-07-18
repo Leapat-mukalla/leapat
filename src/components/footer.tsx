@@ -1,43 +1,74 @@
-import Svg from './Svg';
+'use client';
+
+import InstagramSvg from '@/svgs/social/instagram.svg';
+import FacebookSvg from '@/svgs/social/facebook.svg';
+import XSvg from '@/svgs/social/x.svg';
+import LinkedinSvg from '@/svgs/social/linkedin.svg';
+import LeapatMiniSvg from '@/svgs/leapat-mini.svg';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-leapat-black text-white">
-
-      <div className="flex justify-between mx-[200px] my-4">
+      <div className="mx-[200px] my-4 flex justify-between">
         <div className="flex flex-row">
-          <div className="flex items-center justify-center w-9 h-9 bg-white rounded-full shadow-md space-x-2">
-            <Svg src="social/instagram.svg" />
+          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
+            <InstagramSvg />
           </div>
-          <div className="flex items-center justify-center w-9 h-9 bg-white rounded-full shadow-md space-x-2">
-            <Svg src="social/facebook.svg" />
+          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
+            <FacebookSvg />
           </div>
-          <div className="flex items-center justify-center w-9 h-9 bg-white rounded-full shadow-md space-x-2">
-            <Svg src="social/x.svg" />
+          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
+            <XSvg />
           </div>
-          <div className="flex items-center justify-center w-9 h-9 bg-white rounded-full shadow-mdspace-x-2 ">
-            <Svg src="social/linkedin.svg" />
+          <div className="shadow-mdspace-x-2 flex h-9 w-9 items-center justify-center rounded-full bg-white">
+            <LinkedinSvg />
           </div>
         </div>
 
-        <div className="flex flex-col space-y-2 items-center">
-          <div><Svg src="leapat-mini.svg" /></div>
+        <div className="flex flex-col items-center space-y-2">
           <div>
-            مبادرة ليبات © {currentYear}<br />
+            <LeapatMiniSvg />
+          </div>
+          <div>
+            مبادرة ليبات © {currentYear}
+            <br />
             جميع الحقوق محفوظة
           </div>
         </div>
         <div className="grid grid-cols-3">
-          <div><a className="font-semibold text-2xl leading-9 text-white" href="#">من نحن؟</a></div>
-          <div><a className="font-semibold text-2xl leading-9 text-white" href="#">المشاريع</a></div>
-          <div><a className="font-semibold text-2xl leading-9 text-white" href="#">المدونة</a></div>
-          <div><a className="font-semibold text-2xl leading-9 text-white" href="#">الأحداث</a></div>
-          <div><a className="font-semibold text-2xl leading-9 text-white" href="#">الوظائف</a></div>
-          <div><a className="font-semibold text-2xl leading-9 text-white" href="#">تواصل معنا</a></div>
+          <div>
+            <a className="text-2xl font-semibold leading-9 text-white" href="#">
+              من نحن؟
+            </a>
+          </div>
+          <div>
+            <a className="text-2xl font-semibold leading-9 text-white" href="#">
+              المشاريع
+            </a>
+          </div>
+          <div>
+            <a className="text-2xl font-semibold leading-9 text-white" href="#">
+              المدونة
+            </a>
+          </div>
+          <div>
+            <a className="text-2xl font-semibold leading-9 text-white" href="#">
+              الأحداث
+            </a>
+          </div>
+          <div>
+            <a className="text-2xl font-semibold leading-9 text-white" href="#">
+              الوظائف
+            </a>
+          </div>
+          <div>
+            <a className="text-2xl font-semibold leading-9 text-white" href="#">
+              تواصل معنا
+            </a>
+          </div>
         </div>
-
       </div>
     </footer>
   );
