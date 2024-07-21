@@ -3,16 +3,17 @@ import { IBM_Plex_Sans_Arabic as GFont } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { cn } from '@/lib/utils';
 
 const inter = GFont({
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  subsets: ["arabic"]
- });
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  subsets: ['arabic'],
+});
 
 export const metadata: Metadata = {
-  title: "موقع ليبات",
-  description: "وصف لمحرك البحث",
+  title: 'موقع ليبات',
+  description: 'وصف لمحرك البحث',
 };
 
 export default function RootLayout({
@@ -22,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={inter.className}>
+      <body className={cn(inter.className, 'flex min-h-screen flex-col')}>
         <Header />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
