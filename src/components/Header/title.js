@@ -24,11 +24,14 @@ export const links = [
     title: "Blog",
     url: "/Blog",
   },
+<<<<<<< HEAD
   {
     id: 6,
     title: "صفحتي",
     url: "/MyPage",
   },
+=======
+>>>>>>> ee716d44fd87d12f1e4b217059bd2c6c47eb49d5
   
   // {
   //   id: 6,
