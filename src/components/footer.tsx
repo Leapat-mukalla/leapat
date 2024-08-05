@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer className="bg-leapat-black text-white">
       <div className="mx-[200px] my-4 flex justify-between">
-        <div className="flex flex-row">
+        <div className="flex flex-row space-x-2">
           <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
             <InstagramSvg />
           </div>
