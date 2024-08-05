@@ -23,19 +23,20 @@ export default function Home() {
             <div>
               <p className="text-white font-semibold text-4xl leading-[54px]">من نحن؟</p>
             </div>
-            <div  className="w-[108px] h-[9px] bg-blueShade rounded-[3px]" style={{ top: '1392px', left: '725px' }}></div>
+            <div className="w-[108px] h-[9px] bg-blueShade rounded-[3px]" style={{ top: '1392px', left: '725px' }}></div>
           </div>
           <p className="text-white font-semibold text-6xl leading-[80px]">تعرف علينا</p>
         </div>
-         <div className="text-center">
+        <div className="text-center">
           <p className="text-2xl text-white font-medium	">”ليبات“ مبادرة شبابية تقنية تأسست مطلع عام 2024م.</p>
           <p className="text-2xl text-white font-medium	">نسعى لإحداث نقلات إلى المستقبل من خلال تحقيق تحول رقمي شامل في مجالات الاقتصاد، </p>
           <p className="text-2xl text-white font-medium	">الصحة، التعليم، الثقافة، والفن.</p>
-         </div>
+        </div>
 
-         <div>
-           <Button label="تعرف علينا أكثر"/>
-         </div>
+        <div>
+
+          <Button label="تعرف علينا أكثر" />
+        </div>
       </div>
     </main>
   );
