@@ -3,10 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
     margin-bottom: 80;
-=======
->>>>>>> ee716d44fd87d12f1e4b217059bd2c6c47eb49d5
 }
 .logo{
     font-weight: bold;
