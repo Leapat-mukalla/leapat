@@ -2,11 +2,15 @@
 import Partners from '@/components/partners';
 import Button from "@/components/button/button";
 
+import LeapatLogoSvg from '@/svgs/leapat.svg';
+
 export default function Home() {
   return (
-    <main className="">
+    <main className="mt-[205px]">
       <div className="flex flex-col items-center space-y-2 text-center">
-        <div></div>
+        <div className=''>
+          <LeapatLogoSvg />
+        </div>
         <div>
           <span className="align-right custom-underline text-[80px] font-semibold leading-[120px] text-white">
             قفزة نحو الابداع
@@ -14,7 +18,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mb-[230px]">
+      <div className="">
         <Partners />
       </div>
       <div className="flex flex-col items-center space-y-2 mb-[232px]">

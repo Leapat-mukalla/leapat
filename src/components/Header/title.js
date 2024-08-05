@@ -1,33 +1,33 @@
 export const links = [
   {
     id: 1,
-    title: "Home",
+    title: "الرئيسية",
     url: "/",
   },
   {
     id: 2,
-    title: "Gallery",
-    url: "/Gallery",
+    title: "من نحن؟",
+    url: "#",
   },
   {
     id: 3,
-    title: "Portfolio",
-    url: "/Portfolio",
+    title: "المشاريع",
+    url: "/#",
   },
   {
     id: 4,
-    title: "About Us",
-    url: "/AboutUs",
+    title: "الأحداث",
+    url: "/#",
   },
   {
     id: 5,
-    title: "Blog",
-    url: "/Blog",
+    title: "الوظائف",
+    url: "/#",
   },
   {
     id: 6,
-    title: "صفحتي",
-    url: "/MyPage",
+    title: "تواصل معنا",
+    url: "/#",
   },
   
   // {
