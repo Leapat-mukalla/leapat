@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
-import { IBM_Plex_Sans_Arabic as GFont, Montserrat } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/header";
+
+import { IBM_Plex_Sans_Arabic as GFont, Montserrat } from "next/font/google";
+
 import Footer from "@/components/footer";
+import Header from "@/components/header";
+import type { Metadata } from "next";
 import { cn } from '@/lib/utils';
 
 const inter = GFont({

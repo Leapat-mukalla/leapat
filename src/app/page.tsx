@@ -1,8 +1,6 @@
-
-import Partners from '@/components/partners';
-import Button from "@/components/button/button";
-
+import Button from "@/components/button";
 import LeapatLogoSvg from '@/svgs/leapat.svg';
+import Partners from '@/components/partners';
 
 export default function Home() {
   return (

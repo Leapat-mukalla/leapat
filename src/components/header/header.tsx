@@ -1,11 +1,12 @@
+import { IBM_Plex_Sans_Arabic as GFont, Montserrat } from "next/font/google";
+
+import Button from "../button/button";
 import Link from "next/link";
-import styles from "./header.module.css"
 import { links } from "./title";
-import Button from "../Button/button";
+import styles from "./header.module.css"
 
 // import { Montserrat } from "next/font/google" 
 
-import { IBM_Plex_Sans_Arabic as GFont, Montserrat } from "next/font/google";
 
 const logoFont= GFont({
   subsets:['arabic'],
