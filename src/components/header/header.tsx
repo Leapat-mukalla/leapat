@@ -21,7 +21,7 @@ function Header() {
             {link.title}
           </Link>
         ))}
-        <Button />
+       
       </div>
     </div>
   );
