@@ -102,7 +102,10 @@ export default function Home() {
             <div className={styles.content}>
               <div className={styles.button}>مكتمل</div>
               <h1 className={styles.title}>مشروع تكنو سكتش</h1>
-              <p className={styles.text}>هذا النص هوا مثال لنص يمكن ان </p>
+              <p className={styles.text}>
+                هذا النص هوا مثال لنص يمكن ان هذا النص هوا مثال لنص يمكن ان هذا
+                النص هوا مثال لنص يمكن ان هذا النص هوا مثال لنص يمكن ان
+              </p>
               <div className={styles.moreButton}>
                 المزيد عن المشروع &#10095;
               </div>
