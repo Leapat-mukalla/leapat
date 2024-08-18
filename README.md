@@ -23,7 +23,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Contributing
 
 We encourage you to contribute to Leapat website! Please check out the
-[Contributing to Leapat website guide](https://github.com/Leapat-mukalla/leapat/blob/main/README.md) for guidelines about how to proceed.
+[Contributing to Leapat website guide](https://github.com/Leapat-mukalla/leapat/blob/main/CONTRIBUTING.md) for guidelines about how to proceed.
 
 ## Learn More
 
