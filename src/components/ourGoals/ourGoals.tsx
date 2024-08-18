@@ -1,8 +1,12 @@
 "use client"
 
 import Card from "../card";
-import Corner from "@/svgs/arrow.svg"
+import CodeIcon from "@/svgs/code.svg";
+import HandsIcon from "@/svgs/Handshake.svg"
+import Icon from "@/svgs/1010.svg"
 import React from 'react';
+import Settings from '@/svgs/settings.svg';
+import ZeroOneIcon from "@/svgs/code.svg"
 interface OurGoalsProps {
   title: string;
   subTitle: string;
@@ -30,13 +34,36 @@ const OurGoals: React.FC<OurGoalsProps> =({title,subTitle,description}) => {
       </div>
 
       <div className="min-w-full max-w-[1030px] text-center">
-        <p className="text-2xl font-medium text-white">{description}</p>
+        <p className="mb-24 py-3 text-2xl font-medium text-white">
+          {description}
+        </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-40  max-w-[780px]">
-        <Card direction={null} />
-        <Card direction="top" />
-        <Card direction="left" />
-        <Card direction="right" />
+      <div className="flex max-w-[780px] flex-wrap justify-center gap-40">
+        <Card
+          direction={null}
+          icon={<Settings />}
+          title="توفير الموارد اللازمة"
+          description="والإرشاد والفرص للشباب لتحقيق ابتكاراتهم، وتطوير وبناء مهاراتهم وقدراتهم."
+        />
+        <Card
+          direction="top"
+          icon={<HandsIcon />}
+          title="تعزيز التعاون والشراكات"
+          description="مع المنظمات والمؤسسات والخبراء لتعزيز التأثير والوصول إلى جمهور أوسع."
+        />
+        <Card
+          direction="left"
+          title="قيادة التحول الرقمي"
+          icon={<ZeroOneIcon />}
+          description="في مختلف القطاعات، من خلال
+تطوير وتنفيذ مشاريع وحلول تكنولوجية مبتكرة"
+        />
+        <Card
+          direction="right"
+          title="الإستفادة من التكنولوجيا"
+          description="لتحقيق أهداف التنمية المستدامة والمساهمة في بناء مجتمع أكثر وعيا وعدالة واستدامة."
+          icon={<CodeIcon />}
+        />
       </div>
     </div>
   );

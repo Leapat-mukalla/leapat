@@ -53,19 +53,13 @@ export default function Home() {
           <Button label="تعرف علينا أكثر" />
         </div>
 
-        <div className="mb-52 py-3">
+        <div className="py-3">
           <OurGoals
             title="أهدافنا"
             subTitle="إلى ماذا نسعى؟"
             description="إلى قيادة التحول الرقمي في مختلف القطاعات من خلال تطوير وتنفيذ مشاريع وحلول تكنولوجية مبتكرة، والعمل على الاستفادة من التكنولوجيا لبناء مجتمع أكثر وعيًا. من خلال توفير الموارد والإرشاد والفرص للشباب لتحقيق ابتكاراتهم وتطوير مهاراتهم، وتعزيز الشراكات والتعاون مع المنظمات والخبراء."
           />
         </div>
-        {/* <div className="relative h-64 w-64">
-          <div className="absolute bottom-0 left-0 h-full w-full scale-y-[-1] transform bg-[url('../svgs/corner.png')] bg-left-bottom bg-no-repeat"></div>
-        </div>
-        <div className="relative h-64 w-64">
-          <div className="absolute bottom-0 right-0 h-full w-full scale-x-[-1] scale-y-[-1] transform bg-[url('../svgs/corner.png')] bg-left-bottom bg-no-repeat"></div>
-        </div> */}
       </div>
     </main>
   );
