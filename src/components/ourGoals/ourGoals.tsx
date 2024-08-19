@@ -15,7 +15,7 @@ interface OurGoalsProps {
 
 const OurGoals: React.FC<OurGoalsProps> =({title,subTitle,description}) => {
   return (
-    <div className="mb-[232px] flex flex-col items-center space-y-2">
+    <div className="mb-[232px] flex flex-col items-center">
       <div className="mb-[55px]">
         <div className="flex items-baseline">
           <div>
@@ -64,6 +64,10 @@ const OurGoals: React.FC<OurGoalsProps> =({title,subTitle,description}) => {
           description="لتحقيق أهداف التنمية المستدامة والمساهمة في بناء مجتمع أكثر وعيا وعدالة واستدامة."
           icon={<CodeIcon />}
         />
+      </div>
+
+      <div className="mt-[205px]">
+        <p className="text-4xl leading-[54px] font-medium	text-center	max-w-[833px] text-white underline decoration-4 decoration-blueShade">”في ليبات، نسعى لقيادة التحول الرقمي لتحقيق قفزات رقمية ملموسة بقيادة الشباب المبتكر“</p>
       </div>
     </div>
   );
