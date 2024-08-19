@@ -22,9 +22,13 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Contributing
 
-We encourage you to contribute to Leapat website! Please check out the
+- We encourage you to contribute to Leapat website! Please check out the
 [Contributing to Leapat website guide](https://github.com/Leapat-mukalla/leapat/blob/main/CONTRIBUTING.md) for guidelines about how to proceed.
 
+- Check leapat UI on Figma
+
+1. https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=lz0ymjbFiCD1pf9F-0
+2. https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=SmQZ3gssCfRPO1Zi-0
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
