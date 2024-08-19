@@ -12,14 +12,14 @@ function Footer() {
   return (
     <footer className="bg-leapat-black text-white">
       <div className="mx-[200px] my-4 flex justify-between">
-        <div className="flex flex-row space-x-2">
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
+        <div className="flex flex-row">
+          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
             <InstagramSvg />
           </div>
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
+          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
             <FacebookSvg />
           </div>
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
+          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
             <XSvg />
           </div>
           <div className="shadow-mdspace-x-2 flex h-9 w-9 items-center justify-center rounded-full bg-white">
