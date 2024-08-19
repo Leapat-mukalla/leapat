@@ -20,28 +20,27 @@ const ContactUs: React.FC<ContactUsProps> = ({
   description,
 }) => {
   return (
-    <div className="mb-[232px] flex items-center space-y-2 content-around">
-      <div className="mb-[55px]">
-        <div className="flex items-baseline">
-          <div>
+    <div className="flex h-full content-around">
+      <div className="flex-col h-full min-h-[400px] content-around items-center px-12">
+        <div className="">
+          <div className="flex content-end items-baseline">
             <p className="text-4xl font-semibold leading-[54px] text-white">
               {title}
             </p>
+            <div
+              className="h-[9px] w-[380px] rounded-[3px] bg-blueShade"
+              style={{ top: '1392px', left: '725px' }}
+            ></div>
           </div>
-          <div
-            className="h-[9px] w-[246px] rounded-[3px] bg-blueShade"
-            style={{ top: '1392px', left: '725px' }}
-          ></div>
         </div>
         <p className="text-6xl font-semibold leading-[80px] text-white">
           {subTitle}
         </p>
-        <div className="min-w-full max-w-[1030px] text-center">
-          <p className="mb-24 py-3 text-2xl font-medium text-white">
+        <div className="min-w-full max-w-[300px] text-center">
+          <p className="mb-24 py-3 text-right text-2xl font-medium text-white">
             {description}
           </p>
         </div>
-        <div className="flex max-w-[780px] flex-wrap justify-center gap-40"></div>
       </div>
 
       <ContactUsForm />
