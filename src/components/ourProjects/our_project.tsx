@@ -58,7 +58,7 @@ export default function Home() {
           <div className={styles.imageContainer}>
             <Image
               className={styles.image}
-              src="https://images.pexels.com/photos/3119964/pexels-photo-3119964.jpeg"
+              src="/image.png"
               width={350}
               height={250}
               alt="Post Image"
@@ -75,7 +75,7 @@ export default function Home() {
           <div className={styles.imageContainer}>
             <Image
               className={styles.image}
-              src="https://images.pexels.com/photos/3119964/pexels-photo-3119964.jpeg"
+              src="/image.png"
               width={350}
               height={250}
               alt="Post Image"
@@ -85,20 +85,24 @@ export default function Home() {
             <div className={styles.button}>مكتمل</div>
             <h1 className={styles.title}>مشروع تكنو سكتش</h1>
             <p className={styles.text}>هذا النص هوا مثال لنص يمكن ان</p>
-            <div className={styles.moreButton}>المزيد عن المشروع &#10095;</div>
+            <button className={styles.moreButton}>
+              المزيد عن المشروع &#10095;
+            </button>
           </div>
         </Link>
+
         <div>
           <Link href="/id" className={styles.post}>
             <div className={styles.imageContainer}>
               <Image
                 className={styles.image}
-                src="https://images.pexels.com/photos/3119964/pexels-photo-3119964.jpeg"
+                src="/image.png"
                 width={350}
                 height={250}
                 alt="Post Image"
               />
             </div>
+
             <div className={styles.content}>
               <div className={styles.button}>مكتمل</div>
               <h1 className={styles.title}>مشروع تكنو سكتش</h1>
@@ -106,6 +110,7 @@ export default function Home() {
                 هذا النص هوا مثال لنص يمكن ان هذا النص هوا مثال لنص يمكن ان هذا
                 النص هوا مثال لنص يمكن ان هذا النص هوا مثال لنص يمكن ان
               </p>
+
               <div className={styles.moreButton}>
                 المزيد عن المشروع &#10095;
               </div>
@@ -115,7 +120,7 @@ export default function Home() {
             <div className={styles.imageContainer}>
               <Image
                 className={styles.image}
-                src="https://images.pexels.com/photos/3119964/pexels-photo-3119964.jpeg"
+                src="/image.png"
                 width={350}
                 height={250}
                 alt="Post Image"
@@ -134,7 +139,7 @@ export default function Home() {
             <div className={styles.imageContainer}>
               <Image
                 className={styles.image}
-                src="https://images.pexels.com/photos/3119964/pexels-photo-3119964.jpeg"
+                src="/image.png"
                 width={350}
                 height={250}
                 alt="Post Image"
@@ -151,7 +156,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className={styles.moreButton1}> مزيد من المشاريع</div>
+      <button className={styles.moreButton1}>مزيد من المشاريع &#129136;</button>
 
       <h2 className={styles.partition}>معرض الوسائط ـــــ</h2>
       <h2 className={styles.headTitle}>شاهدنا بدقة أعلى</h2>
