@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import styles from '@/app/(statics)/MyPage/page.module.css';
+import styles from '@/components/ourProjects/page.module.css';
 import classNames from 'classnames';
 
 export default function Home() {
