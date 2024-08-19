@@ -10,7 +10,7 @@ import classNames from 'classnames';
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
-import OurProject from '@/components/ui/our_project';
+import OurProject from '@/components/ourProjects/our_project';
 
 export default function Home() {
   return (

@@ -5,7 +5,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel';
+} from '@/components/ourProjects/carousel';
 import sirajImage from '@/svgs/partners/siraj.png';
 import HadhramutForCultureImage from '@/svgs/partners/hadhramut-for-culture.png';
 import britchCounsil from '@/svgs/partners/britch-counsil.png';
