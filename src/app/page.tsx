@@ -1,4 +1,5 @@
 import Button from '@/components/button';
+import ContactUs from '@/components/contactUs';
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
@@ -60,6 +61,13 @@ export default function Home() {
             description="إلى قيادة التحول الرقمي في مختلف القطاعات من خلال تطوير وتنفيذ مشاريع وحلول تكنولوجية مبتكرة، والعمل على الاستفادة من التكنولوجيا لبناء مجتمع أكثر وعيًا. من خلال توفير الموارد والإرشاد والفرص للشباب لتحقيق ابتكاراتهم وتطوير مهاراتهم، وتعزيز الشراكات والتعاون مع المنظمات والخبراء."
           />
         </div>
+
+        <ContactUs
+          title="تواصل معنا"
+          subTitle="نحن هنا للإستماع إليك"
+          description="نسعد بتواصلكم معنا. سواء كان لديك سؤال، استفسار أو فكرة تريد مشاركتها، نحن هنا للإستماع إليك.
+املأ النموذج التالي وسيتم الرد عليك في أقرب وقت."
+        />
       </div>
     </main>
   );
