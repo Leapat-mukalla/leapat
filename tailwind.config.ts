@@ -24,6 +24,7 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        nav_color: '#A5A5A5',
         blueShade: "#75A3B1",
         primary: {
           DEFAULT: "hsl(var(--primary))",

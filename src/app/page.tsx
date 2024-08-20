@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="">
+      <div className="mt-80 mb-56">
         <Partners />
       </div>
       <div className="mb-[232px] flex flex-col items-center space-y-2">
