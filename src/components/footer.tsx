@@ -10,7 +10,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-leapat-black text-white">
+    <footer className="text-white bg-primary">
       <div className="mx-[200px] my-4 flex justify-between">
         <div className="flex flex-row">
           <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
