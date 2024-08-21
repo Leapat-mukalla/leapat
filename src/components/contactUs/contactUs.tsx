@@ -9,18 +9,20 @@ import React from 'react';
 import Settings from '@/svgs/settings.svg';
 import ZeroOneIcon from '@/svgs/code.svg';
 interface ContactUsProps {
+  id?: string
   title: string;
   subTitle: string;
   description: string;
 }
 
 const ContactUs: React.FC<ContactUsProps> = ({
+  id,
   title,
   subTitle,
   description,
 }) => {
   return (
-    <div className="flex h-full content-around">
+    <div id={id} className="flex h-full content-around">
       <div className="flex-col h-full min-h-[400px] content-around items-center px-12">
         <div className="">
           <div className="flex content-end items-baseline">

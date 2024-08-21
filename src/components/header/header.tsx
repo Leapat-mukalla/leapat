@@ -31,6 +31,7 @@ function Header() {
             <Link
               key={index}
               href={link.url}
+              scroll={true}
               className={cn(
                 isActive && styles.active,
                 'text-light-gray ml-12 text-base font-semibold leading-9 text-nav_color',

@@ -4,8 +4,9 @@ export const links = [
     url: '/',
   },
   {
+    id: 2,
     title: 'من نحن؟',
-    url: '/about-us',
+    url: '/#about-us',
   },
   {
     title: 'المشاريع',
@@ -20,7 +21,8 @@ export const links = [
     url: '/jobs',
   },
   {
+    id: 6,
     title: 'تواصل معنا',
-    url: '/contact-us',
+    url: '/#contact-us',
   },
 ];
