@@ -26,7 +26,7 @@ export default function Home() {
       <div className="mb-[232px] flex flex-col items-center space-y-2">
         <div className="mb-[55px]">
           <div className="flex items-baseline">
-            <div>
+            <div id='about-us'>
               <p className="text-4xl font-semibold leading-[54px] text-white">
                 من نحن؟
               </p>
@@ -66,6 +66,7 @@ export default function Home() {
         </div>
 
         <ContactUs
+        id="contact-us"
           title="تواصل معنا"
           subTitle="نحن هنا للإستماع إليك"
           description="نسعد بتواصلكم معنا. سواء كان لديك سؤال، استفسار أو فكرة تريد مشاركتها، نحن هنا للإستماع إليك.
