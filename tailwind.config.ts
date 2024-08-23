@@ -67,11 +67,11 @@ const config = {
       // },
       backgroundImage: {
 
-        // 'custom-gradient': 'linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(152, 108, 172, 0.2) 25%, rgba(154, 154, 154, 0.7) 50%, rgba(117, 163, 177, 0.7) 75%, rgba(0, 0, 0, 0.7))', //good
-        // 'custom-gradient': 'linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(152, 108, 172, 0.8) 30%, rgba(154, 154, 154, 0.8) 60%, rgba(117, 163, 177, 0.7))',
-        // 'custom-gradient': 'linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(152, 108, 172, 0.8) 25%, rgba(154, 154, 154, 0.8) 50%, rgba(117, 163, 177, 0.8) 75%, rgba(0, 0, 0, 0.9))',
-        // 'custom-gradient': 'linear-gradient(to right bottom , rgba(0, 0, 0, 0.7), rgba(152, 108, 172, 0.7) 25%, rgba(154, 154, 154, 0.7) 50%, rgba(117, 163, 177, 0.7) 75%, rgba(0, 0, 0, 0.7))',
-        'custom-gradient': 'linear-gradient(to top right , rgba(0, 0, 0, 0.7), rgba(117, 163, 177, 0.7) 25%, rgba(154, 154, 154, 0.7) 50%, rgba(152, 108, 172, 0.7) 75%, rgba(0, 0, 0, 0.7))', // good
+        // 'custom-gradient': 'linear-gradient(to top right , rgba(0, 0, 0, 0.7), rgba(117, 163, 177, 0.7) 25%, rgba(154, 154, 154, 0.7) 50%, rgba(152, 108, 172, 0.7) 75%, rgba(0, 0, 0, 0.7))', // good
+        // 'symbols-background' :"url('/src/svgs/Symbols.svg')",
+
+        'custom-gradient': "linear-gradient(to right, rgba(152,108,172, 0.5), rgba(154,154,154, 0.5), rgba(117,163,177, 0.5)), url('/src/svgs/Symbols.svg')",
+
 
       },
       borderRadius: {
