@@ -1,13 +1,13 @@
 'use client';
 
-import Corner from '@/svgs/arrow.svg';
+// import Corner from '@/svgs/arrow.svg';
 import React from 'react';
 
 interface CardProps {
   title: string;
   icon?: React.ReactNode;
   description: string;
-  direction: 'left' | 'right' | 'top' | 'bottom' | null;
+  direction: 'left' | 'right' | 'top' | 'bottom'| null;
 }
 
 const OurGoals: React.FC<CardProps> = ({
@@ -25,8 +25,7 @@ const OurGoals: React.FC<CardProps> = ({
   return (
     <div className="relative h-64 w-64">
       <div
-        className={`absolute ${transformClasses[direction]} h-full w-full transform bg-[url('../svgs/corner.png')] bg-left-bottom bg-no-repeat`}
-      ></div>
+      className={`absolute ${direction ? transformClasses[direction] : ''} h-full w-full transform bg-[url('../svgs/corner.png')] bg-left-bottom bg-no-repeat`}></div>
 
       <div className="mr-5 mt-5 p-1">
         <div className="">{icon}</div>
