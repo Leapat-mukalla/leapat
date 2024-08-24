@@ -1,14 +1,13 @@
-'use client';
-
 import { cn } from '@/lib/utils';
-import { PROJECTS } from './constants';
 
 import Link from 'next/link';
 import ProjectCarousel from './carousel';
 import ProjectCard from './project-card';
 import Arrow from '@/svgs/arrow.svg';
+import { getProjects } from '@/lib/markdown';
 
-export default function ProjectsSection() {
+export default async function ProjectsSection() {
+  const projects = await getProjects();
   return (
     <div className="bg-white pb-80">
       <div className="pt-14">
@@ -24,18 +23,18 @@ export default function ProjectsSection() {
           ماذا انجزنا؟
         </h3>
         <div className="mx-auto max-w-[1100px]">
-          {PROJECTS.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard
-              key={project.id}
-              project={project}
-              wrapperClass={index % 2 === 0 ? 'flex-row-reverse' : ''}
+              {...project}
+              key={project.filePath}
+              reverse={index % 2 === 0}
             />
           ))}
         </div>
       </div>
       <Link
         href="/projects"
-        className="bg-gradient mx-auto mb-20 flex w-[400px] justify-center gap-4 rounded-lg px-9 py-3 text-4xl text-white"
+        className="mx-auto mb-20 flex w-[400px] justify-center gap-4 rounded-lg bg-gradient px-9 py-3 text-4xl text-white"
       >
         مزيد من المشاريع <Arrow />
       </Link>
@@ -52,7 +51,7 @@ export default function ProjectsSection() {
         شاهدنا بدقة أعلى
       </h3>
 
-      <ProjectCarousel />
+      <ProjectCarousel images={['/image.png', '/image.png', '/image.png']} />
     </div>
   );
 }

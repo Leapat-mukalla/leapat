@@ -10,29 +10,21 @@ import {
 import Image from 'next/image';
 import { UseEmblaCarouselType } from 'embla-carousel-react';
 
-const images = [
-  'https://images.pexels.com/photos/3119964/pexels-photo-3119964.jpeg',
-  'https://images.pexels.com/photos/6057023/pexels-photo-6057023.jpeg',
-  'https://images.pexels.com/photos/3214958/pexels-photo-3214958.jpeg',
-  'https://images.pexels.com/photos/3119964/pexels-photo-3119964.jpeg',
-  'https://images.pexels.com/photos/6057023/pexels-photo-6057023.jpeg',
-  'https://images.pexels.com/photos/3214958/pexels-photo-3214958.jpeg',
-];
 
 const TWEEN_FACTOR_BASE = 0.1;
 
 const numberWithinRange = (number: number, min: number, max: number) =>
   Math.min(Math.max(number, min), max);
 
-export default function ProjectsCarousel() {
+export default function ProjectsCarousel({ images }: { images: string[] }) {
   return (
     <Carousel opts={{ direction: 'rtl', loop: true }} className="embla">
-      <Content />
+      <Content images={images} />
     </Carousel>
   );
 }
 
-const Content = () => {
+const Content = ({ images }: { images: string[] }) => {
   const { api: emblaApi } = useCarousel();
 
   const tweenFactor = React.useRef(0);
@@ -128,7 +120,7 @@ const Item = ({ src }: { src: string }) => {
   return (
     <div className="embla__slide__number">
       <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
-        <Image fill alt="text" src={src} className="object-cover" />
+        <Image fill alt="text" src={src} className="not-prose object-cover" />
       </div>
     </div>
   );
