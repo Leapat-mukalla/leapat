@@ -10,16 +10,16 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-white bg-primary">
+    <footer className="bg-foreground text-background">
       <div className="mx-[200px] my-4 flex justify-between">
         <div className="flex flex-row">
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
+          <div className="ml-2 flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
             <InstagramSvg />
           </div>
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
+          <div className="ml-2 flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
             <FacebookSvg />
           </div>
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
+          <div className="ml-2 flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md">
             <XSvg />
           </div>
           <div className="shadow-mdspace-x-2 flex h-9 w-9 items-center justify-center rounded-full bg-white">

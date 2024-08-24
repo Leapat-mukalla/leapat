@@ -5,6 +5,9 @@
     align-items: center;
     padding-bottom: 80;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 .logo{
     font-weight: bold;
@@ -24,12 +27,12 @@ align-items: center;
     font-size: 16px;
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease; 
+    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease;
 }
 
 .active {
     border-bottom: 2px solid white;
     color: white;
     margin-left: 44px;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease; 
+    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease;
 }

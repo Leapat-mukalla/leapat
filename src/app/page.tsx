@@ -1,16 +1,10 @@
-'use client';
 import Button from '@/components/button';
 import ContactUs from '@/components/contactUs';
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import styles from '@/app/(statics)/MyPage/page.module.css';
-import classNames from 'classnames';
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
-import OurProject from '@/components/ourProjects/our_project';
+import ProjectSection from '@/components/projects/projects-section';
 
 export default function Home() {
   return (
@@ -80,7 +74,7 @@ export default function Home() {
         />
       </div>
 
-      <OurProject />
+      <ProjectSection />
     </main>
   );
 }
