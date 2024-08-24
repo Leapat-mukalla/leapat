@@ -1,6 +1,5 @@
 'use client';
 
-// import Corner from '@/svgs/arrow.svg';
 import React from 'react';
 
 interface CardProps {
