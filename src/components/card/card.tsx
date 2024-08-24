@@ -7,7 +7,7 @@ interface CardProps {
   title: string;
   icon?: React.ReactNode;
   description: string;
-  direction: 'left' | 'right' | 'top' | 'bottom'| null;
+  direction: 'left' | 'right' | 'top' | 'bottom' | null;
 }
 
 const OurGoals: React.FC<CardProps> = ({
