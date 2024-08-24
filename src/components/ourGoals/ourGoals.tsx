@@ -11,7 +11,7 @@ interface OurGoalsProps {
   title: string;
   subTitle: string;
   description: string;
-} 
+}
 
 const OurGoals: React.FC<OurGoalsProps> =({title,subTitle,description}) => {
   return (

@@ -21,7 +21,7 @@ const images = [
 
 const TWEEN_FACTOR_BASE = 0.1;
 
-const numberWithinRange = (number, min, max) =>
+const numberWithinRange = (number: number, min: number, max: number) =>
   Math.min(Math.max(number, min), max);
 
 export default function ProjectsCarousel() {
@@ -92,17 +92,6 @@ const Content = () => {
           const tweenNode = tweenNodes.current[slideIndex];
 
           tweenNode.style.transform = `scale(${scale}) perspective(1000px)`;
-
-          const translateZ = 1000 * (1 - tweenValue);
-          const slidePosition = diffToTarget > 0 ? 'left' : 'right';
-
-          tweenNode.style[slidePosition] = `${Math.abs(translateZ)}px`;
-
-          if (slidePosition === 'left') {
-            tweenNode.style.right = 'auto';
-          } else {
-            tweenNode.style.left = 'auto';
-          }
         });
       });
     },
@@ -122,7 +111,7 @@ const Content = () => {
       .on('reInit', tweenOpacity)
       .on('scroll', tweenOpacity)
       .on('slideFocus', tweenOpacity);
-  }, [emblaApi, tweenOpacity]);
+  }, [emblaApi, setTweenFactor, setTweenNodes, tweenOpacity]);
 
   return (
     <CarouselContent>

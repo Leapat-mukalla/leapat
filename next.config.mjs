@@ -2,12 +2,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["images.pexels.com"],
+    remotePatterns: [
+      {
+        hostname: '"images.pexels.com"',
+      },
+    ],
   },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
+      use: ['@svgr/webpack'],
     });
     return config;
   },
