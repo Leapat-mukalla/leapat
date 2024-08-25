@@ -25,7 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      {/* <body className={cn(inter.className, 'flex min-h-screen flex-col bg-gradient-to-r from-[rgb(152,108,172)] via-[#9A9A9A]  to-[#75A3B1]')}> */}
       <body className={cn(inter.className, 'flex min-h-screen flex-col bg-custom-gradient')}>
 
         <Header />
