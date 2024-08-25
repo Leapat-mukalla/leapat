@@ -12,10 +12,6 @@ export const size = {
 export const contentType = 'image/png';
 
 export default async function Image() {
-  const logoSrc = await fetch(
-    new URL('../../public/leapat-white.png', import.meta.url),
-  ).then((res) => res.arrayBuffer());
-
   return new ImageResponse(
     (
       <div
@@ -39,7 +35,6 @@ export default async function Image() {
             alignItems: 'center',
           }}
         >
-          <img alt="Leapat" src={logoSrc as any} height="100" />
           <span
             style={{
               marginLeft: 8,
