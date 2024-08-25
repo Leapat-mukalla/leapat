@@ -15,7 +15,7 @@ const inter = GFont({
 
 export const metadata: Metadata = {
   title: 'موقع ليبات',
-  description: 'وصف لمحرك البحث',
+  description: 'قفزة نحو المستقبل',
 };
 
 export default function RootLayout({

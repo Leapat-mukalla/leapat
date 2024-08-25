@@ -4,32 +4,64 @@ import InstagramSvg from '@/svgs/social/instagram.svg';
 import FacebookSvg from '@/svgs/social/facebook.svg';
 import XSvg from '@/svgs/social/x.svg';
 import LinkedinSvg from '@/svgs/social/linkedin.svg';
-import LeapatMiniSvg from '@/svgs/leapat-mini.svg';
+import Image from 'next/image';
+import Link from 'next/link';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-white bg-primary">
-      <div className="mx-[200px] my-4 flex justify-between">
-        <div className="flex flex-row">
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
-            <InstagramSvg />
-          </div>
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
-            <FacebookSvg />
-          </div>
-          <div className="flex h-9 w-9 items-center justify-center space-x-2 rounded-full bg-white shadow-md ml-2">
-            <XSvg />
-          </div>
-          <div className="shadow-mdspace-x-2 flex h-9 w-9 items-center justify-center rounded-full bg-white">
-            <LinkedinSvg />
-          </div>
+    <footer className="bg-foreground pt-8 text-background">
+      <div className="container my-4 flex flex-col-reverse items-center justify-center gap-8 md:flex-row md:items-start md:justify-between">
+        <div className="text-sm md:hidden">
+          مبادرة ليبات © {currentYear}
+          <br />
+          جميع الحقوق محفوظة
         </div>
 
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-row gap-3">
+          <Link
+            href="https://www.instagram.com/leapat_ye/"
+            rel="noreferrer noopener"
+            target="_blank"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md"
+          >
+            <InstagramSvg />
+          </Link>
+          <Link
+            href="https://www.facebook.com/profile.php?id=61557366681281/"
+            rel="noreferrer noopener"
+            target="_blank"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md"
+          >
+            <FacebookSvg />
+          </Link>
+          <Link
+            href="https://x.com/Leapat_ye/"
+            rel="noreferrer noopener"
+            target="_blank"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md"
+          >
+            <XSvg />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/Leapat_ye/"
+            rel="noreferrer noopener"
+            target="_blank"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md"
+          >
+            <LinkedinSvg />
+          </Link>
+        </div>
+
+        <div className="hidden flex-col items-center space-y-2 md:flex">
           <div>
-            <LeapatMiniSvg />
+            <Image
+              alt="leapat logo"
+              src="/leapat-white.png"
+              width={212}
+              height={50}
+            />
           </div>
           <div>
             مبادرة ليبات © {currentYear}
@@ -37,37 +69,35 @@ function Footer() {
             جميع الحقوق محفوظة
           </div>
         </div>
-        <div className="grid grid-cols-3">
+
+        <div className="flex flex-col gap-3 text-sm leading-9 text-white md:grid md:grid-cols-3 md:text-2xl md:font-semibold">
           <div>
-            <a className="text-2xl font-semibold leading-9 text-white" href="#">
-              من نحن؟
-            </a>
+            <Link href="/about-us">من نحن؟</Link>
           </div>
           <div>
-            <a className="text-2xl font-semibold leading-9 text-white" href="#">
-              المشاريع
-            </a>
+            <Link href="/projects">المشاريع</Link>
           </div>
           <div>
-            <a className="text-2xl font-semibold leading-9 text-white" href="#">
-              المدونة
-            </a>
+            <Link href="/blog">المدونة</Link>
           </div>
           <div>
-            <a className="text-2xl font-semibold leading-9 text-white" href="#">
-              الأحداث
-            </a>
+            <Link href="/events">الأحداث</Link>
           </div>
           <div>
-            <a className="text-2xl font-semibold leading-9 text-white" href="#">
-              الوظائف
-            </a>
+            <Link href="/jobs">الوظائف</Link>
           </div>
           <div>
-            <a className="text-2xl font-semibold leading-9 text-white" href="#">
-              تواصل معنا
-            </a>
+            <Link href="/contact-us">تواصل معنا</Link>
           </div>
+        </div>
+
+        <div className="md:hidden">
+          <Image
+            alt="leapat logo"
+            src="/leapat-white.png"
+            width={212}
+            height={50}
+          />
         </div>
       </div>
     </footer>
