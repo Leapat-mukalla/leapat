@@ -24,6 +24,7 @@ export default async function Image() {
           letterSpacing: '-.02em',
           fontWeight: 700,
           background: 'black',
+          color: 'white',
         }}
       >
         <div
@@ -57,8 +58,9 @@ export default async function Image() {
             textAlign: 'center',
             lineHeight: 1.4,
           }}
+          dir="rtl"
         >
-          قفزة نحو الابداع
+          الابداع نحو قفزة
         </div>
       </div>
     ),
