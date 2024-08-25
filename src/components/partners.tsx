@@ -6,31 +6,34 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
-import sirajImage from '@/svgs/partners/siraj.png';
-import HadhramutForCultureImage from '@/svgs/partners/hadhramut-for-culture.png';
-import britchCounsil from '@/svgs/partners/britch-counsil.png';
+import AutoScroll from 'embla-carousel-auto-scroll';
 
 const imageSources = [
-  { src: HadhramutForCultureImage, alt: 'HadhramutForCulture' },
-  { src: sirajImage, alt: 'Siraj' },
-  { src: britchCounsil, alt: 'britchCounsil' },
-  { src: HadhramutForCultureImage, alt: 'HadhramutForCultureImage' },
-  { src: sirajImage, alt: 'sirajImage2' },
-  { src: britchCounsil, alt: 'britchCounsil2' },
-  { src: HadhramutForCultureImage, alt: 'HadhramutForCultureImage2' },
-  { src: sirajImage, alt: 'sirajImage3' },
-  { src: britchCounsil, alt: 'britchCounsil3' },
-  // Add more images as needed
+  { src: '/partners/hadhramut-for-culture.png', alt: 'HadhramutForCulture' },
+  { src: '/partners/siraj.png', alt: 'Siraj' },
+  { src: '/partners/britch-counsil.png', alt: 'britchCounsil' },
 ];
 
 const Partners = () => {
   return (
     <div className="relative w-full overflow-x-auto">
-      <Carousel opts={{ direction: 'rtl', loop: false }}>
-        <CarouselContent className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-9">
-          {imageSources.map((image, index) => (
-            <CarouselItem key={index} className="flex items-center justify-center">
-              <Image src={image.src} alt={image.alt} className="w-[133px] h-[39px]" />
+      <Carousel
+        plugins={[AutoScroll()]}
+        opts={{ direction: 'rtl', loop: true }}
+      >
+        <CarouselContent className="items-center">
+          {[...imageSources, ...imageSources].map((image, index) => (
+            <CarouselItem
+              key={index}
+              className="relative basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={200}
+                height={200}
+                className="object-contain"
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
