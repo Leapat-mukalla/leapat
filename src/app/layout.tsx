@@ -14,6 +14,8 @@ const inter = GFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://leapat.org'),
+
   title: 'موقع ليبات',
   description: 'قفزة نحو المستقبل',
 };
