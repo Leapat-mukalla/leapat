@@ -25,7 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={cn(inter.className, 'flex min-h-screen flex-col')}>
+      <body className={cn(inter.className, 'flex min-h-screen flex-col bg-custom-gradient')}>
+
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

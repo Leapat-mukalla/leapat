@@ -12,13 +12,11 @@
 .logo{
     font-weight: bold;
     font-size: 22px;
-
 }
 .links{
 display: flex;
 gap: 10px;
 align-items: center;
-/* background-color: white; */
 }
 .link {
     text-decoration: none;
@@ -33,6 +31,6 @@ align-items: center;
 .active {
     border-bottom: 2px solid white;
     color: white;
-    margin-left: 44px;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease;
+    margin-left: 48px;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease; 
 }
