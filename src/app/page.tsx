@@ -1,8 +1,11 @@
 import Button from '@/components/button';
 import ContactUs from '@/components/contactUs';
+
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
+import ProjectSection from '@/components/projects/projects-section';
+
 export default function Home() {
   return (
     <main  className="mt-[205px]  bg-symbols-background bg-cover bg-center z-10 ">
@@ -17,13 +20,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-80 mb-56">
+      <div className="mb-56 mt-80">
         <Partners />
       </div>
       <div className="mb-[232px] flex flex-col items-center space-y-2">
         <div className="mb-[55px]">
           <div className="flex items-baseline">
-            <div>
+            <div id='about-us'>
               <p className="text-4xl font-semibold leading-[54px] text-white">
                 من نحن؟
               </p>
@@ -63,13 +66,16 @@ export default function Home() {
         </div>
 
         <ContactUs
+        id="contact-us"
           title="تواصل معنا"
           subTitle="نحن هنا للإستماع إليك"
           description="نسعد بتواصلكم معنا. سواء كان لديك سؤال، استفسار أو فكرة تريد مشاركتها، نحن هنا للإستماع إليك.
-          
+
 املأ النموذج التالي وسيتم الرد عليك في أقرب وقت."
         />
       </div>
+
+      <ProjectSection />
     </main>
   );
 }

@@ -3,19 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   :root {
-    --background: 277 30% 48%;
+    --background:  0 0% 100%;;
     --foreground: 0 0% 15%;
 
-    /* TODO: add color of other components as per design */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
+
+    --primary: 281 28% 55%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
+    --secondary: 194 28% 58%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+    --tertiary: 281 28% 55%;
+    --tertiary-foreground: 210 40% 98%;
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96.1%;
