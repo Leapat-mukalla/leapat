@@ -1,38 +1,26 @@
 export const links = [
   {
-    id: 1,
-    title: "الرئيسية",
-    url: "/",
+    title: 'الرئيسية',
+    url: '/',
   },
   {
-    id: 2,
-    title: "من نحن؟",
-    url: "#",
+    title: 'من نحن؟',
+    url: '/about-us',
   },
   {
-    id: 3,
-    title: "المشاريع",
-    url: "/#",
+    title: 'المشاريع',
+    url: '/projects',
   },
   {
-    id: 4,
-    title: "الأحداث",
-    url: "/#",
+    title: 'الأحداث',
+    url: '/events',
   },
   {
-    id: 5,
-    title: "الوظائف",
-    url: "/#",
+    title: 'الوظائف',
+    url: '/jobs',
   },
   {
-    id: 6,
-    title: "تواصل معنا",
-    url: "/#",
+    title: 'تواصل معنا',
+    url: '/contact-us',
   },
-  
-  // {
-  //   id: 6,
-  //   title: "Login/Logout",
-  //   url: "/Log",
-  // },
 ];

@@ -6,6 +6,7 @@ import XSvg from '@/svgs/social/x.svg';
 import LinkedinSvg from '@/svgs/social/linkedin.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { links } from './header/title';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -71,24 +72,11 @@ function Footer() {
         </div>
 
         <div className="flex flex-col gap-3 text-sm leading-9 text-white md:grid md:grid-cols-3 md:text-2xl md:font-semibold">
-          <div>
-            <Link href="/about-us">من نحن؟</Link>
-          </div>
-          <div>
-            <Link href="/projects">المشاريع</Link>
-          </div>
-          <div>
-            <Link href="/blog">المدونة</Link>
-          </div>
-          <div>
-            <Link href="/events">الأحداث</Link>
-          </div>
-          <div>
-            <Link href="/jobs">الوظائف</Link>
-          </div>
-          <div>
-            <Link href="/contact-us">تواصل معنا</Link>
-          </div>
+          {links.map((link, index) => (
+            <div key={index}>
+              <Link href={link.url}>{link.title}</Link>
+            </div>
+          ))}
         </div>
 
         <div className="md:hidden">
