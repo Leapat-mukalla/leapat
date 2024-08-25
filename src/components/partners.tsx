@@ -18,11 +18,23 @@ const Partners = () => {
   return (
     <div className="relative w-full overflow-x-auto">
       <Carousel
-        plugins={[AutoScroll()]}
+        plugins={[
+          AutoScroll({
+            playOnInit: true,
+            stopOnFocusIn: false,
+            stopOnInteraction: false,
+            stopOnMouseEnter: false,
+          }),
+        ]}
         opts={{ direction: 'rtl', loop: true }}
       >
         <CarouselContent className="items-center">
-          {[...imageSources, ...imageSources].map((image, index) => (
+          {[
+            ...imageSources,
+            ...imageSources,
+            ...imageSources,
+            ...imageSources,
+          ].map((image, index) => (
             <CarouselItem
               key={index}
               className="relative basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
