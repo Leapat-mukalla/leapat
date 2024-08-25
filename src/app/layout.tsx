@@ -1,14 +1,14 @@
 import "./globals.css";
 
-import { IBM_Plex_Sans_Arabic as GFont, Montserrat } from "next/font/google";
+import { IBM_Plex_Sans_Arabic as GFont } from 'next/font/google';
 
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import type { Metadata } from "next";
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 
 const inter = GFont({
-  weight: ['400', '500', '600', '700'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
   display: 'swap',
   subsets: ['arabic'],
 });
@@ -25,8 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={cn(inter.className, 'flex min-h-screen flex-col bg-custom-gradient')}>
-
+      <body
+        className={cn(
+          inter.className,
+          'bg-custom-gradient flex min-h-screen flex-col',
+        )}
+      >
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
