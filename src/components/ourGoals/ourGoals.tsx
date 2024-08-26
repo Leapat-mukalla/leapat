@@ -3,7 +3,6 @@
 import Card from "../card";
 import CodeIcon from "@/svgs/code.svg";
 import HandsIcon from "@/svgs/Handshake.svg"
-import Icon from "@/svgs/1010.svg"
 import React from 'react';
 import Settings from '@/svgs/settings.svg';
 import ZeroOneIcon from "@/svgs/code.svg"
