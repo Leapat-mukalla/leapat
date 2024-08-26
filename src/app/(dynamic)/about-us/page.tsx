@@ -74,14 +74,14 @@ export default async function AboutUsPage() {
       </div>
 
       {/* Goals Section */}
-      <section className="py-3 mt-[97px]">
+      <div className="py-3 mt-[97px] flex justify-center">
         <OurGoals
           hideMission={true}
           title="أهدافنا"
           subTitle="إلى ماذا نسعى؟"
           description="إلى قيادة التحول الرقمي في مختلف القطاعات من خلال تطوير وتنفيذ مشاريع وحلول تكنولوجية مبتكرة، والعمل على الاستفادة من التكنولوجيا لبناء مجتمع أكثر وعيًا. من خلال توفير الموارد والإرشاد والفرص للشباب لتحقيق ابتكاراتهم وتطوير مهاراتهم، وتعزيز الشراكات والتعاون مع المنظمات والخبراء."
         />
-      </section>
+      </div>
     </div>
   );
 }

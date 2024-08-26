@@ -16,10 +16,10 @@ export const links = [
     title: 'الأحداث',
     url: '/events',
   },
-  {
-    title: 'الوظائف',
-    url: '/jobs',
-  },
+  // {
+  //   title: 'الوظائف',
+  //   url: '/jobs',
+  // },
   {
     id: 6,
     title: 'تواصل معنا',
