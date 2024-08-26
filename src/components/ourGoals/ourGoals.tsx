@@ -11,9 +11,10 @@ interface OurGoalsProps {
   title: string;
   subTitle: string;
   description: string;
+  hideMission?: boolean;
 }
 
-const OurGoals: React.FC<OurGoalsProps> = ({ title, subTitle, description }) => {
+const OurGoals: React.FC<OurGoalsProps> = ({ title, subTitle, description, hideMission = false }) => {
   return (
     <div className="mb-[232px] flex flex-col items-center">
       <div className="mb-[55px]">
@@ -66,9 +67,14 @@ const OurGoals: React.FC<OurGoalsProps> = ({ title, subTitle, description }) => 
         />
       </div>
 
-      <div className="mt-[205px]">
-        <p className="text-4xl leading-[54px] font-medium	text-center	max-w-[833px] text-white underline decoration-4 decoration-blueShade">”في ليبات، نسعى لقيادة التحول الرقمي لتحقيق قفزات رقمية ملموسة بقيادة الشباب المبتكر“</p>
-      </div>
+      {!hideMission && (
+        <div className="mt-[205px]">
+          <p className="text-4xl leading-[54px] font-medium text-center max-w-[833px] text-white underline decoration-4 decoration-blueShade">
+            ”في ليبات، نسعى لقيادة التحول الرقمي لتحقيق قفزات رقمية ملموسة بقيادة الشباب المبتكر“
+          </p>
+        </div>
+      )}
+
     </div>
   );
 }
