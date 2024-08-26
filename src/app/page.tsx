@@ -1,5 +1,7 @@
 import Button from '@/components/button';
 import ContactUs from '@/components/contactUs';
+import Link from 'next/link';
+import { ArrowLeftIcon } from 'lucide-react'
 
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
@@ -8,7 +10,7 @@ import ProjectSection from '@/components/projects/projects-section';
 
 export default function Home() {
   return (
-    <main  className="mt-[205px]  bg-symbols-background bg-cover bg-center z-10 ">
+    <main className="mt-[205px]  bg-symbols-background bg-cover bg-center z-10 ">
       <div className="flex flex-col items-center space-y-2 text-center ">
         <div className="">
           <LeapatLogoSvg />
@@ -54,7 +56,12 @@ export default function Home() {
         </div>
 
         <div className="pb-40">
-          <Button label="تعرف علينا أكثر" />
+          <Link
+            href="/about-us"
+            className="text-white text-4xl font-semibold flex py-5 px-24 rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)]"
+          >
+            تعرف علينا أكثر <ArrowLeftIcon height={50} width={50} />
+          </Link>
         </div>
 
         <div className="py-3">
@@ -66,7 +73,7 @@ export default function Home() {
         </div>
 
         <ContactUs
-        id="contact-us"
+          id="contact-us"
           title="تواصل معنا"
           subTitle="نحن هنا للإستماع إليك"
           description="نسعد بتواصلكم معنا. سواء كان لديك سؤال، استفسار أو فكرة تريد مشاركتها، نحن هنا للإستماع إليك.

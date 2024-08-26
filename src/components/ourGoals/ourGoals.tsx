@@ -13,7 +13,7 @@ interface OurGoalsProps {
   description: string;
 }
 
-const OurGoals: React.FC<OurGoalsProps> =({title,subTitle,description}) => {
+const OurGoals: React.FC<OurGoalsProps> = ({ title, subTitle, description }) => {
   return (
     <div className="mb-[232px] flex flex-col items-center">
       <div className="mb-[55px]">
