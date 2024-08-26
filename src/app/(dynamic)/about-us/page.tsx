@@ -1,7 +1,7 @@
 import React from 'react';
 import OurGoals from '@/components/ourGoals';
 import LeapatLogoSvg from '@/svgs/leapat.svg';
-import Card from "@/components/card";
+import Card from '@/components/card';
 
 export default async function AboutUsPage() {
   return (
@@ -26,13 +26,14 @@ export default async function AboutUsPage() {
 
         <div className="text-center">
           <p className="text-2xl font-medium text-white">
-					”ليبات“ مبادرة شبابية تقنية تأسست مطلع عام 2024، نسعى لتحقيق قفزات رقمية ملموسة يقودها الشباب المبتكر. نهدف
+            ”ليبات“ مبادرة شبابية تقنية تأسست مطلع عام 2024، نسعى لتحقيق قفزات رقمية ملموسة يقودها الشباب المبتكر. نهدف
           </p>
           <p className="text-2xl font-medium text-white">
-					إلى تعزيز ثقافة الابتكار والتعاون بين الشباب لمعالجة القضايا الملحة وتحقيق تأثير مستدام في مجالات الصحة، البيئة، التعليم، 
+            إلى تعزيز ثقافة الابتكار والتعاون بين الشباب لمعالجة القضايا الملحة وتحقيق تأثير مستدام في مجالات الصحة، البيئة،
+            التعليم،
           </p>
           <p className="text-2xl font-medium text-white">
-					الفن، والثقافة. نسعى لبناء مجتمع أكثر وعياً وعدالة من خلال توفير الموارد والإرشاد وتطوير مهارات الشباب.
+            الفن، والثقافة. نسعى لبناء مجتمع أكثر وعياً وعدالة من خلال توفير الموارد والإرشاد وتطوير مهارات الشباب.
           </p>
         </div>
       </div>
@@ -41,7 +42,7 @@ export default async function AboutUsPage() {
       <div className="flex flex-wrap justify-center gap-40">
         {/* Vision */}
         <div className="relative w-[498px]">
-          <div className="absolute h-full w-full bg-[url('../svgs/corner.png')] bg-no-repeat"></div>
+          <div className="absolute bg-left-bottom transform h-full w-full bg-[url('../svgs/corner.png')] bg-no-repeat"></div>
           <div className="mr-5 mt-5 p-1">
             <div className="flex items-baseline">
               <p className="text-[36px] font-semibold leading-[54px] text-white">رؤيتنا</p>
@@ -57,7 +58,7 @@ export default async function AboutUsPage() {
 
         {/* Mission */}
         <div className="relative w-[498px]">
-          <div className="absolute top-0 left-0 scale-x-[-1] h-full w-full bg-[url('../svgs/corner.png')] bg-no-repeat"></div>
+          <div className="absolute bg-left-bottom transform top-0 left-0 scale-x-[-1] h-full w-full bg-[url('../svgs/corner.png')] bg-no-repeat"></div>
           <div className="mr-5 mt-5 p-1">
             <div className="flex items-baseline">
               <p className="text-[36px] font-semibold leading-[54px] text-white">مهمتنا</p>
@@ -73,9 +74,9 @@ export default async function AboutUsPage() {
       </div>
 
       {/* Goals Section */}
-      <section className="py-3">
+      <section className="py-3 mt-[97px]">
         <OurGoals
-				  hideMission={true}
+          hideMission={true}
           title="أهدافنا"
           subTitle="إلى ماذا نسعى؟"
           description="إلى قيادة التحول الرقمي في مختلف القطاعات من خلال تطوير وتنفيذ مشاريع وحلول تكنولوجية مبتكرة، والعمل على الاستفادة من التكنولوجيا لبناء مجتمع أكثر وعيًا. من خلال توفير الموارد والإرشاد والفرص للشباب لتحقيق ابتكاراتهم وتطوير مهاراتهم، وتعزيز الشراكات والتعاون مع المنظمات والخبراء."
