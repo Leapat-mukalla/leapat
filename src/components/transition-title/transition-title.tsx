@@ -1,18 +1,18 @@
 "use client";
 import { useEffect, useState } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
-import styles from './title.module.css'; // Ensure CSS is correctly imported
+import styles from './transition-title.module.css';
 
-export default function Title() {
-  const [currentWord, setCurrentWord] = useState("الإبـــــــداع");
+export default function TransitionTitle() {
+  const words = ["الإبـــــــداع", "الإبتـــــــكار", "التـميُّـــــــــز", "المستقبل"];
+  const [currentWord, setCurrentWord] = useState(words[0]);
 
   useEffect(() => {
-    const words = ["الإبتـــــــكار", "التـميُّـــــــــز", "المستقبل"];
     let currentIndex = 0;
 
     const intervalId = setInterval(() => {
-      setCurrentWord(words[currentIndex]);
       currentIndex = (currentIndex + 1) % words.length;
+      setCurrentWord(words[currentIndex]);
     }, 2000);
 
     return () => clearInterval(intervalId);
@@ -20,8 +20,8 @@ export default function Title() {
 
   return (
     <span className="align-right text-[80px] font-semibold leading-[120px] text-white">
-      <span className={styles.staticText}>قفزة نحو{' '}</span> 
-      <span className={styles.customUnderline}>
+      <span className={styles.staticText}>قفزة نحو{' '}</span>
+      <span className={`${styles.customUnderline} ${styles.wordContainer}`}>
         <SwitchTransition>
           <CSSTransition
             key={currentWord}

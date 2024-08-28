@@ -6,19 +6,19 @@ import { ArrowLeftIcon } from 'lucide-react';
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
-import Title from '@/components/title';
+import TransitionTitle from '@/components/transition-title';
 
 import ProjectSection from '@/components/projects/projects-section';
 
 export default function Home() {
   return (
     <main className="mt-[205px]  bg-symbols-background bg-cover bg-center z-10 ">
-      <div className="flex flex-col items-center space-y-2 text-center ">
-        <div className="">
+      <div className="flex flex-col items-center space-y-2 text-center">
+        <div>
           <LeapatLogoSvg />
         </div>
         <div>
-          <Title />
+          <TransitionTitle />
         </div>
       </div>
 
