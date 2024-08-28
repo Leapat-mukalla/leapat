@@ -1,0 +1,35 @@
+.customUnderline {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.staticText {
+  white-space: nowrap;
+}
+
+.word {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.wordEnter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.wordEnterActive {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+.wordExit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wordExitActive {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+}

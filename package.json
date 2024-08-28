@@ -22,6 +22,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-responsive-carousel": "^3.2.23",
+    "react-transition-group": "^4.4.5",
     "reading-time": "^1.5.0",
     "snarkdown": "^2.0.0",
     "tailwind-merge": "^2.4.0",

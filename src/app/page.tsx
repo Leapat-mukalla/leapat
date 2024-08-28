@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from 'react';
 import Button from '@/components/button';
 import ContactUs from '@/components/contactUs';
 import Link from 'next/link';
@@ -9,24 +6,11 @@ import { ArrowLeftIcon } from 'lucide-react';
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
+import Title from '@/components/title';
+
 import ProjectSection from '@/components/projects/projects-section';
 
 export default function Home() {
-  const [currentWord, setCurrentWord] = useState("الإبـــــــداع");
-
-  useEffect(() => {
-    const words = ["الإبتـــــــكار", "التـميُّـــــــــز", "المستقبل"];
-    let currentIndex = 0;
-
-    const intervalId = setInterval(() => {
-      setCurrentWord(words[currentIndex]);
-      currentIndex = (currentIndex + 1) % words.length;
-    }, 2000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-
   return (
     <main className="mt-[205px]  bg-symbols-background bg-cover bg-center z-10 ">
       <div className="flex flex-col items-center space-y-2 text-center ">
@@ -34,9 +18,7 @@ export default function Home() {
           <LeapatLogoSvg />
         </div>
         <div>
-          <span className="align-right custom-underline text-[80px] font-semibold leading-[120px] text-white">
-            قفزة نحو {currentWord}
-          </span>
+          <Title />
         </div>
       </div>
 
