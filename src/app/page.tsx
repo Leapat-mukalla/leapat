@@ -21,9 +21,9 @@ export default function Home() {
     const intervalId = setInterval(() => {
       setCurrentWord(words[currentIndex]);
       currentIndex = (currentIndex + 1) % words.length;
-    }, 2000); // Change every 2 seconds
+    }, 2000);
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
 
