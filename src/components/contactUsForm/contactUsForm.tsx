@@ -5,35 +5,27 @@ import supabase from '../db/supabaseClient.js';
 import Button from '../button';
 import React from 'react';
 
-const ContactUsForm: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+const ContactUsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
 
     try {
+      const formData = new FormData(e.target as HTMLFormElement);
+      const formProps = Object.fromEntries(formData);
+
       // Insert form data into Supabase contacts table
-      const { data, error } = await supabase
-        .from('contacts')
-        .insert([{ name, email, message }]);
+      const { error } = await supabase.from('contacts').insert([{ formProps }]);
 
       if (error) {
         throw new Error(error.message);
       }
 
-      // If successful, reset the form and show success message
-      setName('');
-      setEmail('');
-      setMessage('');
-      setSuccess(true);
       setIsModalOpen(true);
     } catch (err) {
       if (err instanceof Error) {
@@ -55,43 +47,46 @@ const ContactUsForm: React.FC = () => {
       <form onSubmit={handleSubmit} className="flex-col space-y-4">
         {error && <p className="text-red-500">{error}</p>}
 
-        <div className="flex">
-          <div className="flex-col ml-4">
-            <label htmlFor="name" className="sr-only">الإسم</label>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="name" className="sr-only">
+              الإسم
+            </label>
             <input
               type="text"
               id="name"
+              name="name"
               placeholder="الإسم"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
+              className="w-full rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
               required
             />
           </div>
-          <div className="flex-col ml-4">
-            <label htmlFor="email" className="sr-only">البريد الألكتروني</label>
+          <div>
+            <label htmlFor="email" className="sr-only">
+              البريد الألكتروني
+            </label>
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="البريد الألكتروني"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
+              className="w-full rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
               required
             />
           </div>
         </div>
 
         <div className="py-12">
-          <label htmlFor="message" className="sr-only">محتوى الرسالة</label>
+          <label htmlFor="message" className="sr-only">
+            محتوى الرسالة
+          </label>
           <textarea
             id="message"
+            name="message"
             cols={68}
             rows={10}
             placeholder="محتوى الرسالة"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="resize-none rounded-[10px] bg-[#EBE9E9] py-4 px-8 outline-none"
+            className="resize-none rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
             required
           ></textarea>
         </div>
@@ -101,13 +96,15 @@ const ContactUsForm: React.FC = () => {
 
       {/* Modal Popup */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm mx-auto">
-            <h2 className="text-lg font-bold mb-4">شكراً على رسالتكم!</h2>
-            <p className="text-gray-700 mb-4">سنعاود التواصل معكم قريباً. أطيب التحيات.</p>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
+          <div className="mx-auto max-w-sm rounded-lg bg-white p-6 shadow-lg">
+            <h2 className="mb-4 text-lg font-bold">شكراً على رسالتكم!</h2>
+            <p className="mb-4 text-gray-700">
+              سنعاود التواصل معكم قريباً. أطيب التحيات.
+            </p>
             <button
               onClick={closeModal}
-              className="bg-blueShade text-white py-2 px-4 rounded"
+              className="rounded bg-blueShade px-4 py-2 text-white"
             >
               إغلاق
             </button>
