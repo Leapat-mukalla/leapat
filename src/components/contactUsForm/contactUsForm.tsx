@@ -12,6 +12,7 @@ const ContactUsForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const ContactUsForm: React.FC = () => {
       setEmail('');
       setMessage('');
       setSuccess(true);
+      setIsModalOpen(true);
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -44,16 +46,14 @@ const ContactUsForm: React.FC = () => {
     }
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="flex h-full min-h-[400px] content-around items-center pl-12">
       <form onSubmit={handleSubmit} className="flex-col space-y-4">
-      {success && (
-          <p className="text-green-500">
-            شكراً على رسالتكم! سنعاود التواصل معكم قريباً. أطيب التحيات.
-          </p>
-        )}
         {error && <p className="text-red-500">{error}</p>}
-
 
         <div className="flex">
           <div className="flex-col ml-4">
@@ -98,6 +98,22 @@ const ContactUsForm: React.FC = () => {
 
         <Button label={isSubmitting ? 'Sending...' : 'أرسال'} />
       </form>
+
+      {/* Modal Popup */}
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm mx-auto">
+            <h2 className="text-lg font-bold mb-4">شكراً على رسالتكم!</h2>
+            <p className="text-gray-700 mb-4">سنعاود التواصل معكم قريباً. أطيب التحيات.</p>
+            <button
+              onClick={closeModal}
+              className="bg-blueShade text-white py-2 px-4 rounded"
+            >
+              إغلاق
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
