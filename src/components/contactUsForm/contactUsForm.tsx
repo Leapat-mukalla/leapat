@@ -83,7 +83,7 @@ const ContactUsForm = () => {
           <textarea
             id="message"
             name="message"
-            cols={68}
+            cols={30}
             rows={10}
             placeholder="محتوى الرسالة"
             className="w-full resize-none rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
