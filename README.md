@@ -1,13 +1,7 @@
 ![Leapat Logo](src/svgs/leapat-black.svg)
 
-<p>
-  <span style="background: linear-gradient(92.32deg, #75A3B1 2.28%, #986CAC 100%);
-               -webkit-background-clip: text;
-               color: transparent;">
-    Leapat
-  </span>
-  is a youth-led tech initiative founded in early 2024. Our mission is to drive comprehensive digital transformation across key sectors such as the economy, health, education, culture, and art.
-</p>
+<span style="font-weight: bold; font-size: 1.5em;">Leapat</span> is a youth-led tech initiative founded in early 2024. Our mission is to drive comprehensive digital transformation across key sectors such as the economy, health, education, culture, and art.
+
 
 # Developer Guide
 
@@ -37,9 +31,11 @@ We welcome contributions to the Leapat website! Please refer to the [Contributin
 
 ## Maintainers
 
+## Maintainers
+
 We are grateful for the contributions and guidance of the following maintainers:
 
-| <img src="https://github.com/majedbojan.png?size=100" alt="Maged" style="border-radius: 50%; width: 100px; height: 100px;"/> | <img src="https://github.com/mhmdAljefri.png?size=100" alt="Maintainer 2" style="border-radius: 50%; width: 100px; height: 100px;"/> |
+| ![Maged](https://github.com/majedbojan.png?size=100) | ![Muhammad Al-jefry](https://github.com/mhmdAljefri.png?size=100) |
 |:--:|:--:|
 | [MaJeD BoJaN](https://github.com/majedbojan) | [Muhammad Al-jefry](https://github.com/mhmdAljefri) |
 
