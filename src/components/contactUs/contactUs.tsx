@@ -22,16 +22,16 @@ const ContactUs: React.FC<ContactUsProps> = ({
   description,
 }) => {
   return (
-    <div id={id} className="flex h-full content-around">
-      <div className="flex-col h-full min-h-[400px] content-around items-center px-12">
-        <div className="">
+    <div id={id} className="flex flex-col lg:flex-row h-full content-around items-center lg:space-x-8">
+      <div className="flex flex-col h-full min-h-[400px] content-around items-center px-12 lg:w-1/2">
+      <div className="">
           <div className="flex content-end items-baseline">
             <p className="text-4xl font-semibold leading-[54px] text-white">
               {title}
             </p>
             <div
               className="h-[9px] w-[380px] rounded-[3px] bg-blueShade"
-              style={{ top: '1392px', left: '725px' }}
+              // style={{ top: '1392px', left: '725px' }}
             ></div>
           </div>
         </div>
