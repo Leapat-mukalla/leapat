@@ -90,31 +90,31 @@ const ContactUsForm = () => {
             required
           ></textarea>
         </div>
+
         <div className="w-full md:w-auto">
           <Button label={isSubmitting ? 'Sending...' : 'أرسال'} />
         </div>
+      </form>
 
-          </form>
-
-          {/* Modal Popup */}
-          {isModalOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
-              <div className="mx-auto max-w-sm rounded-lg bg-white p-6 shadow-lg">
-                <h2 className="mb-4 text-lg font-bold">شكراً على رسالتكم!</h2>
-                <p className="mb-4 text-gray-700">
-                  سنعاود التواصل معكم قريباً. أطيب التحيات.
-                </p>
-                <button
-                  onClick={closeModal}
-                  className="rounded bg-blueShade px-4 py-2 text-white"
-                >
-                  إغلاق
-                </button>
-              </div>
-            </div>
-          )}
+      {/* Modal Popup */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
+          <div className="mx-auto max-w-sm rounded-lg bg-white p-6 shadow-lg">
+            <h2 className="mb-4 text-lg font-bold">شكراً على رسالتكم!</h2>
+            <p className="mb-4 text-gray-700">
+              سنعاود التواصل معكم قريباً. أطيب التحيات.
+            </p>
+            <button
+              onClick={closeModal}
+              className="rounded bg-blueShade px-4 py-2 text-white"
+            >
+              إغلاق
+            </button>
+          </div>
         </div>
-        );
+      )}
+    </div>
+  );
 };
 
-        export default ContactUsForm;
+export default ContactUsForm;
