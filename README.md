@@ -33,3 +33,14 @@ We welcome contributions to the Leapat website! Please refer to the [Contributin
 
 1. [Figma Design - Link 1](https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=lz0ymjbFiCD1pf9F-0)
 2. [Figma Design - Link 2](https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=SmQZ3gssCfRPO1Zi-0)
+
+
+## Maintainers
+
+We are grateful for the contributions and guidance of the following maintainers:
+
+| <img src="https://github.com/majedbojan.png?size=100" alt="Maged" style="border-radius: 50%; width: 100px; height: 100px;"/> | <img src="https://github.com/mhmdAljefri.png?size=100" alt="Maintainer 2" style="border-radius: 50%; width: 100px; height: 100px;"/> |
+|:--:|:--:|
+| [MaJeD BoJaN](https://github.com/majedbojan) | [Muhammad Al-jefry](https://github.com/mhmdAljefri) |
+
+Feel free to reach out to any of the maintainers for questions or guidance.
