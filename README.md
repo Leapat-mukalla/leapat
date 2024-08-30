@@ -1,45 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Leapat Logo](src/svgs/leapat-black.svg)
 
-## Getting Started
+<span style="font-weight: bold; font-size: 1.5em;">Leapat</span> is a youth-led tech initiative founded in early 2024. Our mission is to drive comprehensive digital transformation across key sectors such as the economy, health, education, culture, and art.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Developer Guide
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 14
+- Node.js
+- Supabase
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Branches
+
+> **Note:** `develop` is the branch for integrating new features, while `main` is reserved for production-ready code.
+
+### Environments
+
+- `production`: The live environment used by end users.
 
 ## Contributing
 
-- We encourage you to contribute to Leapat website! Please check out the
-[Contributing to Leapat website guide](https://github.com/Leapat-mukalla/leapat/blob/main/CONTRIBUTING.md) for guidelines about how to proceed.
+We welcome contributions to the Leapat website! Please refer to the [Contributing to Leapat website guide](https://github.com/Leapat-mukalla/leapat/blob/main/CONTRIBUTING.md) for detailed instructions.
 
-- Check leapat UI on Figma
+### Leapat UI on Figma
 
-1. https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=lz0ymjbFiCD1pf9F-0
-2. https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=SmQZ3gssCfRPO1Zi-0
-## Learn More
+1. [Figma Design - Link 1](https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=lz0ymjbFiCD1pf9F-0)
+2. [Figma Design - Link 2](https://www.figma.com/design/cUuo0esdZ5YgTWMFAMTgnO/leapat?node-id=0-1&t=SmQZ3gssCfRPO1Zi-0)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Maintainers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Maintainers
 
-## Deploy on Vercel
+We are grateful for the contributions and guidance of the following maintainers:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| ![Maged](https://github.com/majedbojan.png?size=100) | ![Muhammad Al-jefry](https://github.com/mhmdAljefri.png?size=100) |
+|:--:|:--:|
+| [MaJeD BoJaN](https://github.com/majedbojan) | [Muhammad Al-jefry](https://github.com/mhmdAljefri) |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to reach out to any of the maintainers for questions or guidance.
