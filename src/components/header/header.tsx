@@ -6,19 +6,26 @@ import styles from './header.module.css';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import useScroll from '@/hooks/use-scroll';
+import useWidth from '@/hooks/use-width';
+import MobileHeader from './header-mobile';
 
 function Header() {
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const width = useWidth();
 
   const { y } = useScroll();
 
   const addBackground = y > 80;
 
+  if (width < 768) {
+    return <MobileHeader />;
+  }
+
   return (
     <div
       className={cn(styles.container, {
-        'z-50 !h-16 bg-primary shadow-sm': addBackground,
+        'z-50 !h-16 bg-primary/80 shadow-sm backdrop-blur-xl': addBackground,
       })}
     >
       <div className={styles.links}>
