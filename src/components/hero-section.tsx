@@ -26,11 +26,11 @@ export default function HeroSection({
       >
         <Image
           src="/leapat-white.png"
-          width={600}
-          height={400}
+          width={400}
+          height={100}
           alt="Leapat Logo"
         />
-        <h1 className="text-4xl font-semibold leading-[120px] text-white sm:text-6xl md:text-7xl lg:text-[80px]">
+        <h1 className="text-4xl font-semibold leading-[120px] text-white mb-6 sm:text-6xl md:text-7xl lg:text-[80px]">
           {title}
         </h1>
 

@@ -5,8 +5,7 @@
     align-items: center;
     padding-bottom: 80;
     justify-content: center;
-    position: fixed;
-    top: 0;
+    /* top: 0; */
     width: 100%;
 }
 .logo{

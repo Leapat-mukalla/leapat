@@ -14,7 +14,7 @@ import Image from 'next/image';
 
 export default function MobileHeader() {
   return (
-    <div className="container flex justify-between gap-4">
+    <div className="container flex justify-between gap-4 bg-transparent">
       <Image
         src="/leapat-white.png"
         width={100}
@@ -23,7 +23,7 @@ export default function MobileHeader() {
       />
       <Drawer>
         <DrawerTrigger asChild>
-          <Button variant="ghost" size="icon" className="rounded-full">
+          <Button variant="ghost" size="icon" className="rounded-full text-white">
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
