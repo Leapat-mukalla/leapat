@@ -1,8 +1,7 @@
 import Button from '@/components/button';
 import ContactUs from '@/components/contactUs';
 import Link from 'next/link';
-import { ArrowLeftIcon } from 'lucide-react';
-
+import { ArrowLeft } from 'lucide-react';
 import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
@@ -58,9 +57,9 @@ export default function Home() {
         <div className="pb-40">
           <Link
             href="/about-us"
-            className="text-white text-4xl font-semibold flex py-5 px-24 rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)]"
+            className="text-white text-4xl font-semibold flex items-center justify-center py-5 px-24 mt-6 rounded-[20px] m-4 bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)]"
           >
-            تعرف علينا أكثر <ArrowLeftIcon height={50} width={50} />
+            تعرف علينا أكثر <ArrowLeft strokeWidth={3.50} className="mr-4" height={35} width={35} />
           </Link>
         </div>
 

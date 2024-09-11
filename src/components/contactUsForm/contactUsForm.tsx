@@ -91,7 +91,7 @@ const ContactUsForm = () => {
           ></textarea>
         </div>
 
-        <Button label={isSubmitting ? 'Sending...' : 'أرسال'} />
+        <Button label={isSubmitting ? 'Sending...' : 'إرسال'} />
       </form>
 
       {/* Modal Popup */}
