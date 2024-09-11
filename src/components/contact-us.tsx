@@ -1,38 +1,25 @@
-'use client';
-
-import Card from '../card';
-import CodeIcon from '@/svgs/code.svg';
-import ContactUsForm from '../contactUsForm';
-import HandsIcon from '@/svgs/Handshake.svg';
-import Icon from '@/svgs/1010.svg';
+import ContactUsForm from './contactUsForm';
 import React from 'react';
-import Settings from '@/svgs/settings.svg';
-import ZeroOneIcon from '@/svgs/code.svg';
 interface ContactUsProps {
-  id?: string
+  id?: string;
   title: string;
   subTitle: string;
   description: string;
 }
 
-const ContactUs: React.FC<ContactUsProps> = ({
-  id,
-  title,
-  subTitle,
-  description,
-}) => {
+const ContactUs = ({ id, title, subTitle, description }: ContactUsProps) => {
   return (
-    <div id={id} className="flex h-full content-around">
-      <div className="flex-col h-full min-h-[400px] content-around items-center px-12">
+    <div
+      id={id}
+      className="flex h-full flex-col content-around items-center bg-custom-gradient py-52 lg:flex-row lg:space-x-8"
+    >
+      <div className="flex h-full min-h-[400px] flex-col content-around items-center px-12 lg:w-1/2">
         <div className="">
           <div className="flex content-end items-baseline">
             <p className="text-4xl font-semibold leading-[54px] text-white">
               {title}
             </p>
-            <div
-              className="h-[9px] w-[380px] rounded-[3px] bg-blueShade"
-              style={{ top: '1392px', left: '725px' }}
-            ></div>
+            <div className="h-[9px] w-14 rounded-[3px] bg-blueShade lg:w-[246px]"></div>
           </div>
         </div>
         <p className="text-6xl font-semibold leading-[80px] text-white">

@@ -57,8 +57,11 @@ const config: Config = {
       },
       backgroundImage: {
         'custom-gradient':
-          "linear-gradient(to right, rgba(152,108,172, 0.5), rgba(154,154,154, 0.5), rgba(117,163,177, 0.5)), url('/Symbols.svg')",
+          'linear-gradient(122.26deg, #986CAC -2.58%, #100F0D 52.67%, #75A3B1 107.26%)',
         gradient: 'linear-gradient(90deg, #986CAC 0%, #75A3B1 100%)',
+      },
+      backgroundSize: {
+        'custom-gradient': 'cover',
       },
       borderRadius: {
         lg: 'var(--radius)',
