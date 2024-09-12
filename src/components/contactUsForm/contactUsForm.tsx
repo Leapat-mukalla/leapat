@@ -91,9 +91,8 @@ const ContactUsForm = () => {
           ></textarea>
         </div>
 
-        <div className="w-full md:w-auto">
-          <Button label={isSubmitting ? 'Sending...' : 'أرسال'} />
-        </div>
+        <Button label={isSubmitting ? 'Sending...' : 'إرسال'} />
+
       </form>
 
       {/* Modal Popup */}

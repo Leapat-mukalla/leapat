@@ -50,10 +50,10 @@ export default function ProjectCard({
           dangerouslySetInnerHTML={{ __html: content }}
         ></p>
         <Link
-          className="bg-gradient inline-block rounded-lg text-center text-[#75a3b1]"
+          className="bg-gradient inline-block rounded-2xl text-center text-[#75a3b1]"
           href={url}
         >
-          <span className="m-1 inline-block rounded-md bg-white p-2">
+          <span className="m-1 inline-block rounded-xl bg-white px-4 py-2">
             المزيد عن المشروع &#10095;
           </span>
         </Link>

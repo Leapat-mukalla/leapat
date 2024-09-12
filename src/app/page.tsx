@@ -1,7 +1,7 @@
 import ContactUs from '@/components/contact-us';
 import Link from 'next/link';
-import { ArrowLeftIcon } from 'lucide-react';
-
+import { ArrowLeft } from 'lucide-react';
+import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
 import TransitionTitle from '@/components/transition-title';
@@ -48,15 +48,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="pb-40">
-            <Link
-              href="/about-us"
-              className="flex rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] px-24 py-5 text-4xl font-semibold text-white"
-            >
-              تعرف علينا أكثر <ArrowLeftIcon height={50} width={50} />
-            </Link>
-          </div>
-
+        <div className="pb-40">
+          <Link
+            href="/about-us"
+            className="text-white text-4xl font-semibold flex items-center justify-center py-5 px-24 mt-6 rounded-[20px] m-4 bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)]"
+          >
+            تعرف علينا أكثر <ArrowLeft strokeWidth={3.50} className="mr-4" height={35} width={35} />
+          </Link>
+        </div>
           <div className="py-3">
             <OurGoals
               title="أهدافنا"
