@@ -4,6 +4,7 @@ import { useState } from 'react';
 import supabase from '../db/supabaseClient.js';
 import Button from '../button';
 import React from 'react';
+import { SendHorizontal,LoaderCircle } from 'lucide-react'
 
 const ContactUsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -91,7 +92,16 @@ const ContactUsForm = () => {
           ></textarea>
         </div>
 
-        <Button label={isSubmitting ? 'Sending...' : 'إرسال'} />
+        <Button 
+          label={isSubmitting ? 'جاري الإرسال' : 'إرسال'} 
+          icon={
+            isSubmitting ? (
+              <LoaderCircle height={40} width={40} strokeWidth={1.5} className="m-4"/>
+            ) : (
+              <SendHorizontal height={40} width={40} strokeWidth={1.5} className="rotate-180 m-4" />
+            )
+          }
+        />
 
       </form>
 

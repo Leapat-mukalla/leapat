@@ -5,9 +5,9 @@ import LeapatLogoSvg from '@/svgs/leapat.svg';
 import OurGoals from '@/components/ourGoals';
 import Partners from '@/components/partners';
 import TransitionTitle from '@/components/transition-title';
-
 import ProjectSection from '@/components/projects/projects-section';
 import HeroSection from '@/components/hero-section';
+
 
 export default function Home() {
   return (
@@ -50,11 +50,17 @@ export default function Home() {
 
         <div className="pb-40">
           <Link
-            href="/about-us"
-            className="text-white text-4xl font-semibold flex items-center justify-center py-5 px-24 mt-6 rounded-[20px] m-4 bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)]"
-          >
-            تعرف علينا أكثر <ArrowLeft strokeWidth={3.50} className="mr-4" height={35} width={35} />
-          </Link>
+              href="/about-us"
+              className="m-4 mt-6 flex items-center justify-center rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] px-24 py-5 text-4xl font-semibold text-white sm:px-16 sm:py-4 whitespace-nowrap"
+            >
+              تعرف علينا أكثر
+              <ArrowLeft
+                strokeWidth={3.5}
+                className="mr-4 sm:mr-2"
+                height={35}
+                width={35}
+              />
+            </Link>
         </div>
           <div className="py-3">
             <OurGoals
