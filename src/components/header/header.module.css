@@ -5,8 +5,7 @@
     align-items: center;
     padding-bottom: 80;
     justify-content: center;
-    position: sticky;
-    top: 0;
+    /* top: 0; */
     width: 100%;
 }
 .logo{
@@ -14,9 +13,7 @@
     font-size: 22px;
 }
 .links{
-display: flex;
-gap: 10px;
-align-items: center;
+    @apply flex gap-10 items-center overflow-auto;
 }
 .link {
     text-decoration: none;
@@ -32,5 +29,5 @@ align-items: center;
     border-bottom: 2px solid white;
     color: white;
     margin-left: 48px;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease; 
+    transition: color 0.3s ease, border-bottom-color 0.3s ease, margin-left 0.3s ease;
 }

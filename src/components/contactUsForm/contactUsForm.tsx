@@ -43,11 +43,11 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div className="flex h-full min-h-[400px] content-around items-center pl-12">
-      <form onSubmit={handleSubmit} className="flex-col space-y-4">
+    <div className="flex flex-col h-full min-h-[400px] content-around items-center pl-12 lg:w-1/2">
+      <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto grid gap-4 md:gap-4">
         {error && <p className="text-red-500">{error}</p>}
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label htmlFor="name" className="sr-only">
               الإسم
@@ -76,22 +76,23 @@ const ContactUsForm = () => {
           </div>
         </div>
 
-        <div className="py-12">
+        <div className="py-4 md:py-12">
           <label htmlFor="message" className="sr-only">
             محتوى الرسالة
           </label>
           <textarea
             id="message"
             name="message"
-            cols={68}
+            cols={30}
             rows={10}
             placeholder="محتوى الرسالة"
-            className="resize-none rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
+            className="w-full resize-none rounded-[10px] bg-[#EBE9E9] px-8 py-4 outline-none"
             required
           ></textarea>
         </div>
 
-        <Button label={isSubmitting ? 'Sending...' : 'أرسال'} />
+        <Button label={isSubmitting ? 'Sending...' : 'إرسال'} />
+
       </form>
 
       {/* Modal Popup */}

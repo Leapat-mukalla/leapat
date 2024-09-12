@@ -23,10 +23,7 @@ const OurGoals: React.FC<OurGoalsProps> = ({ title, subTitle, description, hideM
               {title}
             </p>
           </div>
-          <div
-            className="h-[9px] w-[246px] rounded-[3px] bg-blueShade"
-            style={{ top: '1392px', left: '725px' }}
-          ></div>
+          <div className="h-[9px] w-14 rounded-[3px] bg-blueShade lg:w-[246px]"></div>
         </div>
         <p className="text-6xl font-semibold leading-[80px] text-white">
           {subTitle}
@@ -68,12 +65,12 @@ const OurGoals: React.FC<OurGoalsProps> = ({ title, subTitle, description, hideM
 
       {!hideMission && (
         <div className="mt-[205px]">
-          <p className="text-4xl leading-[54px] font-medium text-center max-w-[833px] text-white underline decoration-4 decoration-blueShade">
-            ”في ليبات، نسعى لقيادة التحول الرقمي لتحقيق قفزات رقمية ملموسة بقيادة الشباب المبتكر“
+          <p className="max-w-[833px] text-center text-4xl font-medium leading-[54px] text-white underline decoration-blueShade decoration-4">
+            ”في ليبات، نسعى لقيادة التحول الرقمي لتحقيق قفزات رقمية ملموسة
+            بقيادة الشباب المبتكر“
           </p>
         </div>
       )}
-
     </div>
   );
 }
