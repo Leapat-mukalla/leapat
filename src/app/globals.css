@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -75,4 +76,16 @@
     /* todo replace bg-primary with bg-background and fix effect sections */
     @apply bg-primary text-foreground;
   }
+  
+}
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
 }

@@ -44,7 +44,7 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div className="flex flex-col h-full min-h-[400px] content-around items-center pl-12 lg:w-1/2">
+    <div className="flex flex-col h-full min-h-[400px] content-around items-center lg:w-1/2">
       <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto grid gap-4 md:gap-4">
         {error && <p className="text-red-500">{error}</p>}
 
