@@ -42,8 +42,8 @@ const Partners = () => {
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={200}
-                height={200}
+                width={130}
+                height={100}
                 className="object-contain"
               />
             </CarouselItem>

@@ -25,7 +25,7 @@ function Header() {
   return (
     <div
       className={cn(styles.container, {
-        'z-50 !h-16 bg-primary/80 shadow-sm backdrop-blur-xl': addBackground,
+        'z-50 bg-transparent': addBackground,
       })}
     >
       <div className={styles.links}>
