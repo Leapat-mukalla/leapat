@@ -46,7 +46,7 @@ function Footer() {
             <XSvg />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/Leapat_ye/"
+            href="https://www.linkedin.com/company/leapat/"
             rel="noreferrer noopener"
             target="_blank"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md"
