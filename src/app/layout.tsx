@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="ar" dir="rtl">
       <body
         className={cn(
-          inter.className,
+          inter,
           'bg-custom-gradient flex min-h-screen flex-col',
         )}
       >
