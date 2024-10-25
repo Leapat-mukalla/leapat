@@ -27,7 +27,7 @@ export default function Home() {
                 </p>
               </div>
               <div
-                className="h-[9px] w-[108px] rounded-[3px] bg-blueShade"
+                className="h-[9px] w-full max-w-[108px] rounded-[3px] bg-blueShade"
                 style={{ top: '1392px', left: '725px' }}
               ></div>
             </div>
@@ -48,10 +48,10 @@ export default function Home() {
             </p>
           </div>
 
-        <div className="pb-40">
-          <Link
+          <div className="pb-40">
+            <Link
               href="/about-us"
-              className="m-4 mt-6 flex items-center justify-center rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] px-24 py-5 text-4xl font-semibold text-white sm:px-16 sm:py-4 whitespace-nowrap"
+              className="m-4 mt-6 flex items-center justify-center whitespace-nowrap rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] px-6 py-5 text-2xl font-semibold text-white sm:px-12 sm:py-4 sm:text-4xl md:px-24"
             >
               تعرف علينا أكثر
               <ArrowLeft
@@ -61,7 +61,7 @@ export default function Home() {
                 width={35}
               />
             </Link>
-        </div>
+          </div>
           <div className="py-3">
             <OurGoals
               title="أهدافنا"
