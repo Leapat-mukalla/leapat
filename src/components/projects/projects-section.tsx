@@ -5,7 +5,7 @@ import ProjectCarousel from './carousel';
 import ProjectCard from './project-card';
 import { ArrowLeft } from 'lucide-react';
 import { getProjects } from '@/lib/markdown';
-
+import CustomeButton from '@/components/button/customeButton';
 export default async function ProjectsSection() {
   const projects = await getProjects();
   return (
@@ -32,14 +32,14 @@ export default async function ProjectsSection() {
           ))}
         </div>
       </div>
-      <div className="pb-40">
-          <Link
-            href="/projects"
-            className="text-white text-4xl font-semibold flex items-center justify-center py-5 mt-8 rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] w-[450px] mx-auto"
-          >
-              مزيد من المشاريع <ArrowLeft strokeWidth={3.50} className="mr-4" height={35} width={35} />
-          </Link>
-        </div>
+      <div className="mt-8 flex justify-center">
+        <CustomeButton
+          href="/projects"
+          text=" مزيد من المشاريع "
+          icon={ArrowLeft}
+          gradientColors={{ from: '#75A3B1', to: 'rgb(152,108,172)' }}
+        />
+      </div>
 
       <h2
         className={cn(

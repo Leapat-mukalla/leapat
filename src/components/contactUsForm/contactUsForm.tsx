@@ -5,6 +5,7 @@ import supabase from '../db/supabaseClient.js';
 import Button from '../button';
 import React from 'react';
 import { SendHorizontal,LoaderCircle } from 'lucide-react'
+import CustomeButton from '@/components/button/customeButton';
 
 const ContactUsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -96,13 +97,12 @@ const ContactUsForm = () => {
           label={isSubmitting ? 'جاري الإرسال' : 'إرسال'} 
           icon={
             isSubmitting ? (
-              <LoaderCircle height={40} width={40} strokeWidth={1.5} className="m-4"/>
+              <LoaderCircle height={40} width={40} strokeWidth={0.5} className="m-4 mb-2 mr-4"/>
             ) : (
-              <SendHorizontal height={40} width={40} strokeWidth={1.5} className="rotate-180 m-4" />
+              <SendHorizontal height={40} width={40} strokeWidth={0.5} className="rotate-[215deg] mb-2 mr-4 " style={{ fill: 'white', stroke: 'gray' }} />
             )
           }
         />
-
       </form>
 
       {/* Modal Popup */}
