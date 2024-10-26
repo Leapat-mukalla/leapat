@@ -26,7 +26,7 @@ export default function Home() {
                 </p>
               </div>
               <div
-                className="h-[9px] w-[108px] rounded-[3px] bg-blueShade"
+                className="h-[9px] w-full max-w-[108px] rounded-[3px] bg-blueShade"
                 style={{ top: '1392px', left: '725px' }}
               ></div>
             </div>

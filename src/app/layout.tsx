@@ -28,13 +28,10 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body
-        className={cn(
-          inter.className,
-          'bg-custom-gradient flex min-h-screen flex-col',
-        )}
+        className={cn(inter, 'flex min-h-screen flex-col bg-custom-gradient')}
       >
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>
