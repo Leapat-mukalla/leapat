@@ -7,7 +7,7 @@ import Partners from '@/components/partners';
 import TransitionTitle from '@/components/transition-title';
 import ProjectSection from '@/components/projects/projects-section';
 import HeroSection from '@/components/hero-section';
-import CustomeButton from '@/components/button/customeButton';
+import CustomeButton from '@/components/button/custome-button';
 export default function Home() {
   return (
     <>

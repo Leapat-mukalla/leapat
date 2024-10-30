@@ -5,7 +5,7 @@ import ProjectCarousel from './carousel';
 import ProjectCard from './project-card';
 import { ArrowLeft } from 'lucide-react';
 import { getProjects } from '@/lib/markdown';
-import CustomeButton from '@/components/button/customeButton';
+import CustomeButton from '@/components/button/custome-button';
 export default async function ProjectsSection() {
   const projects = await getProjects();
   return (
