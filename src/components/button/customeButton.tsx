@@ -1,11 +1,9 @@
-import Link from 'next/link';
+import Link, { type LinkProps } from 'next/link';
 
-interface CustomeButtonProps {
-    href: string;
-    text: string;
+interface CustomeButtonProps extends LinkProps {
     icon?: React.ElementType;
+    text: string;
     gradientColors?: { from: string; to: string };
-    className?: string;
   }
 
 const CustomeButton = ({
