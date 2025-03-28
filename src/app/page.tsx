@@ -7,8 +7,7 @@ import Partners from '@/components/partners';
 import TransitionTitle from '@/components/transition-title';
 import ProjectSection from '@/components/projects/projects-section';
 import HeroSection from '@/components/hero-section';
-
-
+import CustomeButton from '@/components/button/custome-button';
 export default function Home() {
   return (
     <>
@@ -48,20 +47,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="pb-40">
-            <Link
-              href="/about-us"
-              className="m-4 mt-6 flex items-center justify-center whitespace-nowrap rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] px-6 py-5 text-2xl font-semibold text-white sm:px-12 sm:py-4 sm:text-4xl md:px-24"
-            >
-              تعرف علينا أكثر
-              <ArrowLeft
-                strokeWidth={3.5}
-                className="mr-4 sm:mr-2"
-                height={35}
-                width={35}
-              />
-            </Link>
-          </div>
+          <CustomeButton
+            href="/about-us"
+            text="تعرف علينا أكثر"
+            icon={ArrowLeft}
+            gradientColors={{ from: '#75A3B1', to: 'rgb(152,108,172)' }}
+          />
+
           <div className="py-3">
             <OurGoals
               title="أهدافنا"
