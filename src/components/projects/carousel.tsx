@@ -1,126 +1,150 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  useCarousel,
-} from '@/components/ui/carousel';
-import Image from 'next/image';
-import { UseEmblaCarouselType } from 'embla-carousel-react';
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
-
-const TWEEN_FACTOR_BASE = 0.1;
-
-const numberWithinRange = (number: number, min: number, max: number) =>
-  Math.min(Math.max(number, min), max);
-
-export default function ProjectsCarousel({ images }: { images: string[] }) {
-  return (
-    <Carousel opts={{ direction: 'rtl', loop: true }} className="embla">
-      <Content images={images} />
-    </Carousel>
-  );
+interface CarouselSlide {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
 }
 
-const Content = ({ images }: { images: string[] }) => {
-  const { api: emblaApi } = useCarousel();
+const slides: CarouselSlide[] = [
+  {
+    id: 1,
+    image: "/101.png",
+    title: "واجهة تفاعلية متطورة",
+    description: "تجربة مستخدم حديثة مع أحدث التقنيات",
+  },
+  {
+    id: 2,
+    image: "/101.png",
+    title: "اجتماعات احترافية",
+    description: "حلول تقنية للشركات والمؤسسات",
+  },
+  {
+    id: 3,
+    image: "/101.png",
+    title: "تصاميم إبداعية",
+    description: "فن رقمي بألوان زاهية ومتدرجة",
+  },
+  {
+    id: 4,
+    image: "/101.png",
+    title: "مساحة عمل ذكية",
+    description: "تحليل البيانات والبرمجة المتقدمة",
+  },
+  {
+    id: 5,
+    image: "/101.png",
+    title: "عروض تقنية متقدمة",
+    description: "شاشات تفاعلية وعناصر تقنية حديثة",
+  },
+];
 
-  const tweenFactor = React.useRef(0);
-  const tweenNodes = React.useRef<HTMLDivElement[]>([]);
-  const setTweenNodes = React.useCallback(
-    (emblaApi: NonNullable<UseEmblaCarouselType[1]>) => {
-      tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-        return slideNode.querySelector(
-          '.embla__slide__number > div',
-        ) as HTMLDivElement;
-      });
-    },
-    [],
-  );
+export const ProjectsCarousel = ({ images }: { images: string[] }) => {
+  const [currentSlide, setCurrentSlide] = useState(2);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const setTweenFactor = React.useCallback(
-    (emblaApi: NonNullable<UseEmblaCarouselType[1]>) => {
-      tweenFactor.current =
-        TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length;
-    },
-    [],
-  );
+  useEffect(() => {
+    if (!isAutoPlaying) return;
 
-  const tweenOpacity = React.useCallback(
-    (emblaApi: NonNullable<UseEmblaCarouselType[1]>, eventName?: any) => {
-      const engine = emblaApi.internalEngine();
-      const scrollProgress = emblaApi.scrollProgress();
-      const slidesInView = emblaApi.slidesInView();
-      const isScrollEvent = eventName === 'scroll';
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
 
-      emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-        let diffToTarget = scrollSnap - scrollProgress;
-        const slidesInSnap = engine.slideRegistry[snapIndex];
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
 
-        slidesInSnap.forEach((slideIndex) => {
-          if (isScrollEvent && !slidesInView.includes(slideIndex)) return;
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
 
-          if (engine.options.loop) {
-            engine.slideLooper.loopPoints.forEach((loopItem) => {
-              const target = loopItem.target();
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
-              if (slideIndex === loopItem.index && target !== 0) {
-                const sign = Math.sign(target);
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
-                if (sign === -1) {
-                  diffToTarget = scrollSnap - (1 + scrollProgress);
-                }
-                if (sign === 1) {
-                  diffToTarget = scrollSnap + (1 - scrollProgress);
-                }
-              }
-            });
-          }
-
-          const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
-          const scale = numberWithinRange(tweenValue, 0, 1).toString();
-          const tweenNode = tweenNodes.current[slideIndex];
-
-          tweenNode.style.transform = `scale(${scale}) perspective(1000px)`;
-        });
-      });
-    },
-    [],
-  );
-
-  React.useEffect(() => {
-    if (!emblaApi) return;
-
-    setTweenNodes(emblaApi);
-    setTweenFactor(emblaApi);
-    tweenOpacity(emblaApi);
-
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenOpacity)
-      .on('scroll', tweenOpacity)
-      .on('slideFocus', tweenOpacity);
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenOpacity]);
+  const getSlidePosition = (index: number) => {
+    const diff = index - currentSlide;
+    if (diff === 0) return "center";
+    if (diff === 1 || diff === -(slides.length - 1)) return "right";
+    if (diff === -1 || diff === slides.length - 1) return "left";
+    if (diff === 2 || diff === -(slides.length - 2)) return "far-right";
+    if (diff === -2 || diff === slides.length - 2) return "far-left";
+    return "hidden";
+  };
 
   return (
-    <CarouselContent>
-      {images.map((src, index) => (
-        <CarouselItem key={index} className="basis-1/3">
-          <Item src={src} />
-        </CarouselItem>
-      ))}
-    </CarouselContent>
-  );
-};
+    <div
+      className="bg-carousel-bg relative w-full px-4 py-16"
+      onMouseEnter={() => setIsAutoPlaying(false)}
+      onMouseLeave={() => setIsAutoPlaying(true)}
+    >
+      {/* Carousel Container */}
+      <div className="relative h-[400px] overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center">
+          {[...images, ...images].map((slide, index) => {
+            const position = getSlidePosition(index);
 
-const Item = ({ src }: { src: string }) => {
-  return (
-    <div className="embla__slide__number">
-      <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
-        <Image fill alt="text" src={src} className="not-prose object-cover" />
+            return (
+              <div
+                key={index}
+                className={`absolute cursor-pointer transition-all duration-500 ease-in-out ${
+                  position === "center"
+                    ? "z-30 h-[320px] w-[500px] scale-100 opacity-100"
+                    : position === "left" || position === "right"
+                      ? "z-20 h-[320px] w-[140px] opacity-70"
+                      : position === "far-left" || position === "far-right"
+                        ? "z-10 h-[320px] w-[140px] opacity-40"
+                        : "z-0 h-[320px] w-[140px] opacity-0"
+                } ${
+                  position === "left"
+                    ? "-translate-x-[330px]"
+                    : position === "right"
+                      ? "translate-x-[330px]"
+                      : position === "far-left"
+                        ? "-translate-x-[480px]"
+                        : position === "far-right"
+                          ? "translate-x-[480px]"
+                          : position === "hidden"
+                            ? "translate-x-[600px]"
+                            : "translate-x-0"
+                }`}
+                onClick={() => position !== "center" && goToSlide(index)}
+              >
+                <div className="bg-carousel-slide relative h-full w-full overflow-hidden rounded-3xl">
+                  <Image
+                    src={slide}
+                    alt={slide + index}
+                    fill
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Dots Indicator */}
+      <div className="mt-8 flex justify-center space-x-2 rtl:space-x-reverse">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`h-2 w-2 rounded-full transition-all duration-300 ${
+              index === currentSlide ? "!w-6 bg-primary" : "bg-gray-300"
+            }`}
+            aria-label={`الانتقال إلى الشريحة ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from '@/components/hero-section';
+import { HeroSection } from "@/components/hero-section";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,7 +9,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import Image from 'next/image';
-import ProjectsCarousel from '@/components/projects/carousel';
+import { ProjectsCarousel } from "@/components/projects/carousel";
 import getProject from '@/lib/markdown';
 
 export default async function ProjectDetails({

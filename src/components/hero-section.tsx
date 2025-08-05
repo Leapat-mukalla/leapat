@@ -2,7 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
-export default function HeroSection({
+export function HeroSection({
   title,
   children,
   view,
@@ -10,16 +10,16 @@ export default function HeroSection({
 }: {
   title?: string;
   children?: React.ReactNode;
-  view: 'list' | 'details';
+  view: "list" | "details";
   className?: string;
 }) {
   return (
     <section className="bg-custom-gradient">
       <div
         className={cn(
-          'container flex flex-col py-40',
+          "container flex flex-col py-40 lg:pt-60 2xl:pt-80",
           {
-            'items-center justify-center': view === 'list',
+            "items-center justify-center": view === "list",
           },
           className,
         )}
@@ -30,7 +30,7 @@ export default function HeroSection({
           height={100}
           alt="Leapat Logo"
         />
-        <h1 className="text-4xl font-semibold leading-[120px] text-white mb-6 sm:text-6xl md:text-7xl lg:text-[80px]">
+        <h1 className="mb-6 text-4xl font-semibold leading-[120px] text-white sm:text-6xl md:text-7xl lg:text-[80px]">
           {title}
         </h1>
 

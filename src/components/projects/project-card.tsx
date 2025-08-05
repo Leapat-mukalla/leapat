@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { ProjectMatter } from '@/lib/markdown';
+import { buttonVariants } from "../ui/button";
 
 export default function ProjectCard({
   reverse,
@@ -18,9 +19,9 @@ export default function ProjectCard({
     <div
       key={filePath}
       className={cn(
-        'mb-12 flex flex-col items-center justify-between gap-5 p-4 md:flex-row md:gap-20',
+        "mb-12 flex flex-col items-center justify-between gap-5 p-4 md:flex-row md:gap-20",
         {
-          'md:flex-row-reverse': reverse,
+          "md:flex-row-reverse": reverse,
         },
       )}
     >
@@ -33,14 +34,14 @@ export default function ProjectCard({
         />
         <span
           style={{
-            boxShadow: '#75A3B1 16px 20px 56px 0px',
+            boxShadow: "#75A3B1 16px 20px 56px 0px",
           }}
           className="absolute -bottom-0 right-1/4 z-0 h-1/2 w-1/2"
         ></span>
       </Link>
       <div className="md:basis-1/2">
-        <div className="mb-5 mb-[10px] w-[70px] rounded-md bg-[#75A3B1] text-center text-white">
-          {project.completed ? 'مكتمل' : 'قيد التنفيذ'}
+        <div className="mb-5 w-[70px] rounded-md bg-primary text-center text-white">
+          {project.completed ? "مكتمل" : "قيد التنفيذ"}
         </div>
         <h1 className="mb-10 text-right text-4xl font-bold text-secondary">
           {project.title}
@@ -49,13 +50,8 @@ export default function ProjectCard({
           className="mb-10 line-clamp-3 text-right text-[18px] text-[#999]"
           dangerouslySetInnerHTML={{ __html: content }}
         ></p>
-        <Link
-          className="bg-gradient inline-block rounded-2xl text-center text-[#75a3b1]"
-          href={url}
-        >
-          <span className="m-1 inline-block rounded-xl bg-white px-4 py-2">
-            المزيد عن المشروع &#10095;
-          </span>
+        <Link className={buttonVariants({ variant: "outline" })} href={url}>
+          المزيد عن المشروع
         </Link>
       </div>
     </div>

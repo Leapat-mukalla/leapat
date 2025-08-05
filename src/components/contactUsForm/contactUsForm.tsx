@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
-import supabase from '../db/supabaseClient.js';
-import Button from '../button';
-import React from 'react';
-import { SendHorizontal,LoaderCircle } from 'lucide-react'
+import { useState } from "react";
+import React from "react";
+import { SendHorizontal, LoaderCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import HeroSvg from "../hero-svg";
 
 const ContactUsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,18 +21,18 @@ const ContactUsForm = () => {
       const formProps = Object.fromEntries(formData);
 
       // Insert form data into Supabase contacts table
-      const { error } = await supabase.from('contacts').insert([{ formProps }]);
+      // const { error } = await supabase.from('contacts').insert([{ formProps }]);
 
-      if (error) {
-        throw new Error(error.message);
-      }
+      // if (error) {
+      // throw new Error(error.message);
+      // }
 
       setIsModalOpen(true);
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
       } else {
-        setError('An unknown error occurred.');
+        setError("An unknown error occurred.");
       }
     } finally {
       setIsSubmitting(false);
@@ -44,11 +44,14 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div className="flex flex-col h-full min-h-[400px] content-around items-center lg:w-1/2">
-      <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto grid gap-4 md:gap-4">
+    <div className="z-10 flex h-full min-h-[400px] flex-col content-around items-center lg:w-1/2">
+      <form
+        onSubmit={handleSubmit}
+        className="mx-auto grid w-full max-w-lg gap-4 md:gap-4"
+      >
         {error && <p className="text-red-500">{error}</p>}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
             <label htmlFor="name" className="sr-only">
               الإسم
@@ -92,17 +95,24 @@ const ContactUsForm = () => {
           ></textarea>
         </div>
 
-        <Button 
-          label={isSubmitting ? 'جاري الإرسال' : 'إرسال'} 
-          icon={
-            isSubmitting ? (
-              <LoaderCircle height={40} width={40} strokeWidth={1.5} className="m-4"/>
-            ) : (
-              <SendHorizontal height={40} width={40} strokeWidth={1.5} className="rotate-180 m-4" />
-            )
-          }
-        />
-
+        <Button>
+          {isSubmitting ? (
+            <LoaderCircle
+              height={40}
+              width={40}
+              strokeWidth={1.5}
+              className="m-4"
+            />
+          ) : (
+            <SendHorizontal
+              height={40}
+              width={40}
+              strokeWidth={1.5}
+              className="m-4 rotate-180"
+            />
+          )}
+          {isSubmitting ? "جاري الإرسال" : "إرسال"}
+        </Button>
       </form>
 
       {/* Modal Popup */}
@@ -115,7 +125,7 @@ const ContactUsForm = () => {
             </p>
             <button
               onClick={closeModal}
-              className="rounded bg-blueShade px-4 py-2 text-white"
+              className="rounded bg-primary px-4 py-2 text-white"
             >
               إغلاق
             </button>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Drawer,
@@ -6,13 +6,13 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
-} from '@/components/ui/drawer';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { links } from './title';
-import Image from 'next/image';
+} from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
+import { links } from "@/lib/constants";
 
-export default function MobileHeader() {
+export function HeaderMobile() {
   return (
     <div className="container flex justify-between gap-4 bg-transparent">
       <Image
@@ -23,7 +23,11 @@ export default function MobileHeader() {
       />
       <Drawer>
         <DrawerTrigger asChild>
-          <Button variant="ghost" size="icon" className="rounded-full text-white">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="rounded-full text-white"
+          >
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
