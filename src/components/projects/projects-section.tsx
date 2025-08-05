@@ -1,23 +1,24 @@
 import { cn } from '@/lib/utils';
 
 import Link from 'next/link';
-import ProjectCarousel from './carousel';
-import ProjectCard from './project-card';
-import { ArrowLeft } from 'lucide-react';
-import { getProjects } from '@/lib/markdown';
+import { ProjectsCarousel } from "./carousel";
+import ProjectCard from "./project-card";
+import { ChevronLeft } from "lucide-react";
+import { getProjects } from "@/lib/markdown";
+import { buttonVariants } from "../ui/button";
 
-export default async function ProjectsSection() {
+export async function ProjectsSection() {
   const projects = await getProjects();
   return (
-    <div className="bg-white pb-80">
+    <div className="bg-white pb-20">
       <div className="pt-14">
         <h2
           className={cn(
-            'mt-18 flex items-end justify-center gap-2 text-4xl text-[#75A3B1]',
+            "mt-18 flex items-end justify-center gap-2 text-4xl text-primary",
           )}
         >
           مشاريعنا
-          <span className="mb-2 inline-block h-[9px] w-[130px] bg-[#75A3B1]"></span>
+          <span className="mb-2 inline-block h-[9px] w-[130px] bg-primary"></span>
         </h2>
         <h3 className="mb-12 text-center text-6xl text-[#262626]">
           ماذا انجزنا؟
@@ -32,34 +33,28 @@ export default async function ProjectsSection() {
           ))}
         </div>
       </div>
-      <div className="pb-40">
+      <div className="flex justify-center pb-40">
         <Link
           href="/projects"
-          className="m-4 mt-6 flex items-center justify-center whitespace-nowrap rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] px-6 py-5 text-2xl font-semibold text-white sm:px-12 sm:py-4 sm:text-4xl md:px-24"
+          className={buttonVariants({ className: "px-20" })}
         >
-          مزيد من المشاريع{' '}
-          <ArrowLeft
-            strokeWidth={3.5}
-            className="mr-4"
-            height={35}
-            width={35}
-          />
+          مزيد من المشاريع <ChevronLeft className="mr-4" />
         </Link>
       </div>
 
       <h2
         className={cn(
-          'mt-18 flex items-end justify-center gap-2 text-4xl text-[#75A3B1]',
+          "mt-18 flex items-end justify-center gap-2 text-4xl text-primary",
         )}
       >
-        معرض الوسائط{' '}
-        <span className="mb-2 inline-block h-[9px] w-[200px] bg-[#75A3B1]"></span>
+        معرض الوسائط{" "}
+        <span className="mb-2 inline-block h-[9px] w-[200px] bg-primary"></span>
       </h2>
       <h3 className="mb-12 text-center text-6xl text-[#262626]">
         شاهدنا بدقة أعلى
       </h3>
 
-      <ProjectCarousel images={['/image.png', '/image.png', '/image.png']} />
+      <ProjectsCarousel images={["/image.png", "/image.png", "/image.png"]} />
     </div>
   );
 }

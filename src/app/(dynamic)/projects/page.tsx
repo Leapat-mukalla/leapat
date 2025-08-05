@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '@/components/projects/project-card';
 
-import HeroSection from '@/components/hero-section';
+import { HeroSection } from "@/components/hero-section";
 import { getProjects } from '@/lib/markdown';
 
 export default async function ProjectsPage() {

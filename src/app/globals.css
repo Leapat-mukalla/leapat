@@ -16,9 +16,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 281 28% 55%;
+    --primary: 234 97% 52%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 194 28% 58%;
+    --secondary: 0 0% 9%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --tertiary: 281 28% 55%;
     --tertiary-foreground: 210 40% 98%;
@@ -76,7 +76,7 @@
     /* todo replace bg-primary with bg-background and fix effect sections */
     @apply bg-primary text-foreground;
   }
-  
+
 }
 html::-webkit-scrollbar {
   width: 0px;
@@ -88,4 +88,15 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background: #fff;
+}
+
+
+.animate-dash {
+  animation: dash-draw 3s ease-in-out forwards; /* Adjust duration as needed */
+  stroke-dasharray: var(--path-length);
+  stroke-dashoffset: var(--path-length); /* Initially hide the stroke */
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(133.3deg, #1542D4 -8.49%, #100F0D 50.42%, #171717 104.04%);
 }

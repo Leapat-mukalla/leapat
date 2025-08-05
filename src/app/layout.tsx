@@ -2,10 +2,10 @@ import "./globals.css";
 
 import { IBM_Plex_Sans_Arabic as GFont } from 'next/font/google';
 
-import Footer from '@/components/footer';
-import Header from '@/components/header';
-import type { Metadata } from 'next';
-import { cn } from '@/lib/utils';
+import type { Metadata } from "next";
+import { cn } from "@/lib/utils";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 const inter = GFont({
   weight: ['100', '200', '300', '400', '500', '600', '700'],
@@ -28,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body
-        className={cn(inter, 'flex min-h-screen flex-col bg-custom-gradient')}
+        className={cn(
+          inter,
+          "relative flex min-h-screen flex-col bg-custom-gradient",
+        )}
       >
         <Header />
         <main className="flex-grow overflow-hidden">{children}</main>

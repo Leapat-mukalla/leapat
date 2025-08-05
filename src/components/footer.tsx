@@ -6,13 +6,13 @@ import XSvg from '@/svgs/social/x.svg';
 import LinkedinSvg from '@/svgs/social/linkedin.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { links } from './header/title';
+import { links } from "@/lib/constants";
 
-function Footer() {
+export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground pt-8 text-background">
+    <footer className="bg-secondary pt-8">
       <div className="container my-4 flex flex-col-reverse items-center justify-center gap-8 md:flex-row md:items-start md:justify-between">
         <div className="text-sm md:hidden">
           مبادرة ليبات © {currentYear}
@@ -91,5 +91,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

@@ -14,7 +14,7 @@ const imageSources = [
   { src: '/partners/britch-counsil.png', alt: 'britchCounsil' },
 ];
 
-const Partners = () => {
+export const Partners = () => {
   return (
     <div className="relative w-full overflow-x-auto">
       <Carousel
@@ -26,7 +26,7 @@ const Partners = () => {
             stopOnMouseEnter: false,
           }),
         ]}
-        opts={{ direction: 'rtl', loop: true }}
+        opts={{ direction: "rtl", loop: true }}
       >
         <CarouselContent className="items-center">
           {[
@@ -54,4 +54,3 @@ const Partners = () => {
   );
 };
 
-export default Partners;

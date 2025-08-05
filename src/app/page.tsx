@@ -1,24 +1,25 @@
 import ContactUs from '@/components/contact-us';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
-import LeapatLogoSvg from '@/svgs/leapat.svg';
-import OurGoals from '@/components/ourGoals';
-import Partners from '@/components/partners';
-import TransitionTitle from '@/components/transition-title';
-import ProjectSection from '@/components/projects/projects-section';
-import HeroSection from '@/components/hero-section';
-
+import { ChevronLeft } from "lucide-react";
+import { OurGoals } from "@/components/our-goals";
+import { Partners } from "@/components/partners";
+import TransitionTitle from "@/components/transition-title";
+import { ProjectsSection } from "@/components/projects/projects-section";
+import { HeroSection } from "@/components/hero-section";
+import HeroSvg from "@/components/hero-svg";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <>
-      <HeroSection className="min-w-full" view="list">
+      <HeroSection className="relative min-w-full" view="list">
+        <HeroSvg />
         <TransitionTitle />
 
         <div className="mb-56 mt-80">
           <Partners />
         </div>
-        <div className="mb-[232px] flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center space-y-2">
           <div className="mb-[55px]">
             <div className="flex items-baseline">
               <div id="about-us">
@@ -27,8 +28,8 @@ export default function Home() {
                 </p>
               </div>
               <div
-                className="h-[9px] w-full max-w-[108px] rounded-[3px] bg-blueShade"
-                style={{ top: '1392px', left: '725px' }}
+                className="h-[9px] w-full max-w-[108px] rounded-[3px] bg-primary"
+                style={{ top: "1392px", left: "725px" }}
               ></div>
             </div>
             <p className="text-6xl font-semibold leading-[80px] text-white">
@@ -41,25 +42,20 @@ export default function Home() {
             </p>
             <p className="text-2xl font-medium text-white">
               نسعى لإحداث نقلات إلى المستقبل من خلال تحقيق تحول رقمي شامل في
-              مجالات الاقتصاد،{' '}
+              مجالات الاقتصاد،{" "}
             </p>
             <p className="text-2xl font-medium text-white">
               الصحة، التعليم، الثقافة، والفن.
             </p>
           </div>
 
-          <div className="pb-40">
+          <div className="pb-40 pt-10">
             <Link
               href="/about-us"
-              className="m-4 mt-6 flex items-center justify-center whitespace-nowrap rounded-[20px] bg-gradient-to-r from-[#75A3B1] to-[rgb(152,108,172)] px-6 py-5 text-2xl font-semibold text-white sm:px-12 sm:py-4 sm:text-4xl md:px-24"
+              className={buttonVariants({ className: "w-80" })}
             >
               تعرف علينا أكثر
-              <ArrowLeft
-                strokeWidth={3.5}
-                className="mr-4 sm:mr-2"
-                height={35}
-                width={35}
-              />
+              <ChevronLeft className="mr-4 sm:mr-2" />
             </Link>
           </div>
           <div className="py-3">
@@ -72,7 +68,7 @@ export default function Home() {
         </div>
       </HeroSection>
 
-      <ProjectSection />
+      <ProjectsSection />
 
       <ContactUs
         id="contact-us"
