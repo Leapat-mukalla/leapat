@@ -100,3 +100,46 @@ html::-webkit-scrollbar-thumb {
 .bg-custom-gradient {
   background: linear-gradient(133.3deg, #1542D4 -8.49%, #100F0D 50.42%, #171717 104.04%);
 }
+
+
+@layer utilities {
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg) scaleX(-1);
+    }
+    25% {
+      transform: rotate(3deg) scaleX(-1);
+    }
+    50% {
+      transform: rotate(-3deg) scaleX(-1);
+    }
+    75% {
+      transform: rotate(3deg) scaleX(-1);
+    }
+  }
+
+  @keyframes wiggle-infinite {
+    0%,
+    100% {
+      transform: rotate(-2deg) scaleX(-1);
+    }
+    25% {
+      transform: rotate(2deg) scaleX(-1);
+    }
+    50% {
+      transform: rotate(-2deg) scaleX(-1);
+    }
+    75% {
+      transform: rotate(2deg) scaleX(-1);
+    }
+  }
+
+  .animate-wiggle {
+    animation: wiggle 0.6s ease-in-out;
+  }
+
+  .animate-wiggle-infinite {
+    animation: wiggle-infinite 3s ease-in-out infinite;
+  }
+}

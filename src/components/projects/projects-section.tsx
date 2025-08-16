@@ -6,6 +6,7 @@ import ProjectCard from "./project-card";
 import { ChevronLeft } from "lucide-react";
 import { getProjects } from "@/lib/markdown";
 import { buttonVariants } from "../ui/button";
+import { ViewportFadeIn } from "../viewport-fade-in";
 
 export async function ProjectsSection() {
   const projects = await getProjects();
@@ -25,11 +26,9 @@ export async function ProjectsSection() {
         </h3>
         <div className="mx-auto max-w-[1100px]">
           {projects.map((project, index) => (
-            <ProjectCard
-              {...project}
-              key={project.filePath}
-              reverse={index % 2 === 0}
-            />
+            <ViewportFadeIn key={project.filePath}>
+              <ProjectCard {...project} reverse={index % 2 === 0} />
+            </ViewportFadeIn>
           ))}
         </div>
       </div>

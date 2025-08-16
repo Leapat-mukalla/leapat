@@ -8,6 +8,7 @@ import { ProjectsSection } from "@/components/projects/projects-section";
 import { HeroSection } from "@/components/hero-section";
 import HeroSvg from "@/components/hero-svg";
 import { buttonVariants } from "@/components/ui/button";
+import { ViewportFadeIn } from "@/components/viewport-fade-in";
 
 export default function Home() {
   return (
@@ -37,26 +38,45 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl font-medium text-white">
-              ”ليبات“ مبادرة شبابية تقنية تأسست مطلع عام 2024م.
-            </p>
-            <p className="text-2xl font-medium text-white">
-              نسعى لإحداث نقلات إلى المستقبل من خلال تحقيق تحول رقمي شامل في
-              مجالات الاقتصاد،{" "}
-            </p>
-            <p className="text-2xl font-medium text-white">
-              الصحة، التعليم، الثقافة، والفن.
-            </p>
+            <ViewportFadeIn delay={300}>
+              <p className="text-2xl font-medium text-white">
+                ”ليبات“ مبادرة شبابية تقنية تأسست مطلع عام 2024م.
+              </p>
+            </ViewportFadeIn>
+            <ViewportFadeIn delay={600}>
+              <p className="text-2xl font-medium text-white">
+                تهدف إلى قيادة التحول الرقمي في مختلف القطاعات من خلال تطوير
+                وتنفيذ مشاريع وحلول تكنولوجية مبتكرة.
+              </p>
+            </ViewportFadeIn>
+            <ViewportFadeIn delay={900}>
+              <p className="text-2xl font-medium text-white">
+                كما تسعى إلى الاستفادة من التكنولوجيا لبناء مجتمع أكثر وعيًا.
+              </p>
+            </ViewportFadeIn>
+            <ViewportFadeIn delay={900}>
+              <p className="text-2xl font-medium text-white">
+                نسعى لإحداث نقلات إلى المستقبل من خلال تحقيق تحول رقمي شامل في
+                مجالات الاقتصاد،{" "}
+              </p>
+            </ViewportFadeIn>
+            <ViewportFadeIn delay={1200}>
+              <p className="text-2xl font-medium text-white">
+                الصحة، التعليم، الثقافة، والفن.
+              </p>
+            </ViewportFadeIn>
           </div>
 
           <div className="pb-40 pt-10">
-            <Link
-              href="/about-us"
-              className={buttonVariants({ className: "w-80" })}
-            >
-              تعرف علينا أكثر
-              <ChevronLeft className="mr-4 sm:mr-2" />
-            </Link>
+            <ViewportFadeIn>
+              <Link
+                href="/about-us"
+                className={buttonVariants({ className: "w-80" })}
+              >
+                تعرف علينا أكثر
+                <ChevronLeft className="mr-4 sm:mr-2" />
+              </Link>
+            </ViewportFadeIn>
           </div>
           <div className="py-3">
             <OurGoals

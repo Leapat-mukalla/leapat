@@ -86,8 +86,10 @@ export function OurTeam() {
         <p className="text-center text-6xl font-semibold leading-[80px] text-secondary">
           كادرنا العظيم
         </p>
+      </div>
 
-        <div className="mt-40 flex gap-4 lg:gap-10">
+      <div>
+        <div className="mt-40 flex gap-4 overflow-auto ps-12 lg:gap-10">
           {members.map(({ name, role, social, image }, index) => (
             <div key={name}>
               <div className="relative aspect-square w-[250px] text-center">
