@@ -39,19 +39,19 @@ export default async function ProjectDetails({
         </Breadcrumb>
       </HeroSection>
       <section className="bg-background py-20 md:py-48">
-        <div className="prose md:prose-lg lg:prose-xl xl:prose-2xl dark:prose-invert mx-auto">
+        <div className="prose mx-auto dark:prose-invert md:prose-lg lg:prose-xl xl:prose-2xl">
           <header className="mb-20 flex gap-5">
             <Image
               className="not-prose relative z-10 rounded-[27px] object-cover"
-              src="/image.png"
+              src={project.data.image || "/image.png"}
               alt="Post Image"
               width={190}
               height={190}
             />
 
             <div className="mt-4">
-              <span className="not-prose rounded-md bg-[#75A3B1] px-4 py-1 text-center text-white">
-                {project.data.completed ? 'مكتمل' : 'قيد الإنجاز'}
+              <span className="not-prose rounded-md bg-primary px-4 py-1 text-center text-white">
+                {project.data.completed ? "مكتمل" : "قيد الإنجاز"}
               </span>
               <h1 className="mt-2 text-right text-4xl font-bold">
                 {project.data.title}

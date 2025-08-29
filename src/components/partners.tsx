@@ -9,9 +9,13 @@ import {
 import AutoScroll from 'embla-carousel-auto-scroll';
 
 const imageSources = [
-  { src: '/partners/hadhramut-for-culture.png', alt: 'HadhramutForCulture' },
-  { src: '/partners/siraj.png', alt: 'Siraj' },
-  { src: '/partners/britch-counsil.png', alt: 'britchCounsil' },
+  { src: "/partners/hadhramut-for-culture.png", alt: "HadhramutForCulture" },
+  { src: "/partners/siraj.png", alt: "Siraj" },
+  { src: "/partners/britch-counsil.png", alt: "britchCounsil" },
+  // Metafour
+  { src: "/partners/metafour.png", alt: "Metafour" },
+  // TCHU
+  { src: "/partners/tchu.png", alt: "TCHU" },
 ];
 
 export const Partners = () => {

@@ -88,13 +88,13 @@ export const OurGoals = ({
       </div>
 
       {!hideMission && (
-        <div className="relative mt-[205px] min-h-[500px]">
+        <div className="relative z-0 mt-[205px] min-h-[500px]">
           <Image
             src="/man.png"
             width={400}
             height={200}
             alt="leapat man illustration"
-            className="animate-wiggle-infinite absolute -start-1/3 top-20 object-contain"
+            className="animate-wiggle-infinite absolute -start-1/3 top-48 w-64 object-contain lg:top-20 lg:w-96"
           />
 
           <Image
@@ -102,9 +102,9 @@ export const OurGoals = ({
             width={400}
             height={200}
             alt="leapat woman illustration"
-            className="animate-wiggle-infinite absolute -end-1/3 -top-20 object-contain"
+            className="animate-wiggle-infinite absolute -end-9 top-52 w-64 object-contain lg:-end-1/3 lg:-top-20 lg:w-96"
           />
-          <p className="max-w-[833px] text-center text-4xl font-medium leading-[54px] text-white underline decoration-primary decoration-4">
+          <p className="relative z-10 max-w-[833px] text-center text-4xl font-medium leading-[54px] text-white underline decoration-primary decoration-4">
             ”في ليبات، نسعى لقيادة التحول الرقمي لتحقيق قفزات رقمية ملموسة
             بقيادة الشباب المبتكر“
           </p>
