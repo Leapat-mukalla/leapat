@@ -25,19 +25,13 @@ export default function ProjectCard({
         },
       )}
     >
-      <Link className="relative aspect-video w-full md:basis-1/2" href={url}>
+      <Link className="relative aspect-square w-full md:basis-1/2" href={url}>
         <Image
-          className="relative z-10 rounded-[27px] object-cover"
+          className="relative z-10 rounded-[27px] object-contain"
           fill
-          src="/image.png"
+          src={project.image || "/image.png"}
           alt="Post Image"
         />
-        <span
-          style={{
-            boxShadow: "#75A3B1 16px 20px 56px 0px",
-          }}
-          className="absolute -bottom-0 right-1/4 z-0 h-1/2 w-1/2"
-        ></span>
       </Link>
       <div className="md:basis-1/2">
         <div className="mb-5 w-[70px] rounded-md bg-primary text-center text-white">
