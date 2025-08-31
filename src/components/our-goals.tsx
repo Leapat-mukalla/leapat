@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
 import { IconCard } from "./icon-card";
 import Image from "next/image";
+import React from "react";
 import { ViewportFadeIn } from "./viewport-fade-in";
 
 interface OurGoalsProps {
@@ -93,12 +93,13 @@ export const OurGoals = ({
             src="/man.png"
             width={400}
             height={200}
+            style={{ animationDelay: "1.5s" }}
             alt="leapat man illustration"
             className="animate-wiggle-infinite absolute -start-1/3 top-48 w-64 object-contain lg:top-20 lg:w-96"
           />
 
           <Image
-            src="/woman.png"
+            src="/Woman.png"
             width={400}
             height={200}
             alt="leapat woman illustration"

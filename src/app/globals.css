@@ -119,7 +119,7 @@ html::-webkit-scrollbar-thumb {
     }
   }
 
-  @keyframes wiggle-infinite {
+  /* @keyframes wiggle-infinite {
     0%,
     100% {
       transform: rotate(-2deg) scaleX(-1);
@@ -133,13 +133,35 @@ html::-webkit-scrollbar-thumb {
     75% {
       transform: rotate(2deg) scaleX(-1);
     }
-  }
+  } */
 
+
+  @keyframes wiggle-infinite {
+	  0% {
+	    transform: translate(0, 0) rotate(-2deg)  scale(1);
+	  }
+	  25% {
+	    transform: translate(5px, -8px) rotate(1deg)  scale(1.01);
+	  }
+	  50% {
+	    transform: translate(0, 0) rotate(2deg)  scale(1);
+	  }
+	  75% {
+	    transform: translate(-5px, -8px) rotate(-1deg)  scale(0.99);
+	  }
+	  100% {
+	    transform: translate(0, 0) rotate(-2deg)  scale(1);
+	  }
+	}
+	
+	.animate-wiggle-infinite {
+	  animation: wiggle-infinite 8s ease-in-out infinite;
+	}
   .animate-wiggle {
     animation: wiggle 0.6s ease-in-out;
   }
 
-  .animate-wiggle-infinite {
+  /* .animate-wiggle-infinite {
     animation: wiggle-infinite 3s ease-in-out infinite;
-  }
+  } */
 }
