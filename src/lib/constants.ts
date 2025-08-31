@@ -13,16 +13,46 @@ export const links = [
     url: "/projects",
   },
   {
-    title: "الأحداث",
-    url: "/events",
+    title: "المقالات",
+    url: "/blog",
   },
-  // {
-  //   title: 'الوظائف',
-  //   url: '/jobs',
-  // },
+
+  {
+    title: "تطبيقاتنا",
+    url: "#",
+    hasDropdown: true,
+    dropdownItems: [
+      {
+        title: "تطبيق 1",
+        url: "/apps/app1",
+        description: "وصف التطبيق الأول",
+      },
+      {
+        title: "تطبيق 2",
+        url: "/apps/app2",
+        description: "وصف التطبيق الثاني",
+      },
+      {
+        title: "تطبيق 3",
+        url: "/apps/app3",
+        description: "وصف التطبيق الثالث",
+      },
+    ],
+  },
   {
     id: 6,
     title: "تواصل معنا",
-    url: "/#contact-us",
+    url: "#contact-us",
+  },
+];
+
+export const languages = [
+  {
+    code: "en",
+    name: "English",
+  },
+  {
+    code: "ar",
+    name: "العربية",
   },
 ];
