@@ -23,19 +23,9 @@ export const links = [
     hasDropdown: true,
     dropdownItems: [
       {
-        title: "تطبيق 1",
-        url: "/apps/app1",
+        title: "تطبيق حصين",
+        url: "#",
         description: "وصف التطبيق الأول",
-      },
-      {
-        title: "تطبيق 2",
-        url: "/apps/app2",
-        description: "وصف التطبيق الثاني",
-      },
-      {
-        title: "تطبيق 3",
-        url: "/apps/app3",
-        description: "وصف التطبيق الثالث",
       },
     ],
   },
