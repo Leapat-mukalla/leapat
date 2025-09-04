@@ -1,8 +1,9 @@
-import React from 'react';
-import ProjectCard from '@/components/projects/project-card';
-import ProjectSearchForm from "@/components/projects/project-search-form";
 import { HeroSection } from "@/components/hero-section";
-import { getProjects } from '@/lib/markdown';
+import NoResults from "@/components/ui/no-results";
+import ProjectCard from "@/components/projects/project-card";
+import ProjectSearchForm from "@/components/projects/project-search-form";
+import React from "react";
+import { getProjects } from "@/lib/markdown";
 
 interface ProjectsPageProps {
   searchParams: {
@@ -50,21 +51,17 @@ export default async function ProjectsPage({
               />
             ))
           ) : (
-            <div className="py-20 text-center">
-              <p className="text-lg text-gray-600">
-                {searchQuery
-                  ? "لا توجد مشاريع تطابق البحث"
-                  : "لا توجد مشاريع متاحة"}
-              </p>
-              {searchQuery && (
-                <a
-                  href="/projects"
-                  className="mt-4 inline-block text-blue-600 underline hover:text-blue-800"
-                >
-                  عرض جميع المشاريع
-                </a>
-              )}
-            </div>
+            <NoResults
+              title={searchQuery ? "لا توجد نتائج" : "لا توجد مشاريع متاحة"}
+              message={
+                searchQuery
+                  ? "لم يتم العثور على مشاريع تطابق بحثك. حاول استخدام كلمات بحث أخرى"
+                  : "لا توجد مشاريع متاحة حالياً. تحقق مرة أخرى لاحقاً"
+              }
+              buttonText="عودة لقائمة المشاريع"
+              buttonHref="/projects"
+              searchQuery={searchQuery}
+            />
           )}
         </div>
 

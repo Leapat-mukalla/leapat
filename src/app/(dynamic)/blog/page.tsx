@@ -1,6 +1,7 @@
 import BlogCard from "@/components/blog/blog-card";
 import BlogSearchForm from "@/components/blog/blog-search-form";
 import { HeroSection } from "@/components/hero-section";
+import NoResults from "@/components/ui/no-results";
 import React from "react";
 import { getBlogs } from "@/lib/markdown";
 
@@ -14,7 +15,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const allBlogs = await getBlogs();
   const searchQuery = searchParams.search?.toLowerCase().trim();
 
-  // Filter blogs based on search query
   const filteredBlogs = searchQuery
     ? allBlogs.filter(
         (blog) =>
@@ -52,25 +52,21 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               ))}
             </div>
           ) : (
-            <div className="py-20 text-center">
-              <p className="text-lg text-gray-600">
-                {searchQuery
-                  ? "لا توجد مقالات تطابق البحث"
-                  : "لا توجد مقالات متاحة"}
-              </p>
-              {searchQuery && (
-                <a
-                  href="/blog"
-                  className="mt-4 inline-block text-blue-600 underline hover:text-blue-800"
-                >
-                  عرض جميع المقالات
-                </a>
-              )}
-            </div>
+            <NoResults
+              title={searchQuery ? "لا توجد نتائج" : "لا توجد مقالات متاحة"}
+              message={
+                searchQuery
+                  ? "لم يتم العثور على مقالات تطابق بحثك. حاول استخدام كلمات بحث أخرى"
+                  : "لا توجد مقالات متاحة حالياً. تحقق مرة أخرى لاحقاً"
+              }
+              buttonText="عودة لقائمة المقالات"
+              buttonHref="/blog"
+              searchQuery={searchQuery}
+            />
           )}
         </div>
 
-        {/* todo add  pagination */}
+        {/* todo add pagination */}
       </section>
     </>
   );
