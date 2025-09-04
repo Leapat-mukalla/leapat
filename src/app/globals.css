@@ -2,13 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   :root {
-    --background:  0 0% 100%;;
+    --background: 0 0% 100%;
     --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
@@ -76,7 +91,6 @@
     /* todo replace bg-primary with bg-background and fix effect sections */
     @apply bg-primary text-foreground;
   }
-
 }
 html::-webkit-scrollbar {
   width: 0px;
@@ -90,7 +104,6 @@ html::-webkit-scrollbar-thumb {
   background: #fff;
 }
 
-
 .animate-dash {
   animation: dash-draw 3s ease-in-out forwards; /* Adjust duration as needed */
   stroke-dasharray: var(--path-length);
@@ -98,9 +111,13 @@ html::-webkit-scrollbar-thumb {
 }
 
 .bg-custom-gradient {
-  background: linear-gradient(133.3deg, #1542D4 -8.49%, #100F0D 50.42%, #171717 104.04%);
+  background: linear-gradient(
+    133.3deg,
+    #1542d4 -8.49%,
+    #100f0d 50.42%,
+    #171717 104.04%
+  );
 }
-
 
 @layer utilities {
   @keyframes wiggle {

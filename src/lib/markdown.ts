@@ -23,6 +23,7 @@ export type BlogMatter = {
     image: string;
     date: string;
     author: string;
+    authorTitle: string;
     category: string;
     tags: string[];
     excerpt: string;
