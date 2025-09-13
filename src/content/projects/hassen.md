@@ -5,9 +5,11 @@ date: "2024-07-10"
 completed: false
 layout: "haseen"
 partners:
-  - "/vercel.svg"
-  - "/vercel.svg"
-  - "/vercel.svg"
+  - "/haseen_partners/Amen.png"
+  - "/haseen_partners/Takamol.png"
+  - "/haseen_partners/Adalah_Foundation.png"
+  - "/haseen_partners/Saferworld.png"
+  - "/haseen_partners/EN_FundedbytheEU_RGB_POS.png"
 tool:
   url: "https://haseen.example.com"
 media: []
