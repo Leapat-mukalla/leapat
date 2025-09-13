@@ -13,16 +13,36 @@ export const links = [
     url: "/projects",
   },
   {
-    title: "الأحداث",
-    url: "/events",
+    title: "المقالات",
+    url: "/blog",
   },
-  // {
-  //   title: 'الوظائف',
-  //   url: '/jobs',
-  // },
+
+  {
+    title: "تطبيقاتنا",
+    url: "#",
+    hasDropdown: true,
+    dropdownItems: [
+      {
+        title: "تطبيق حصين",
+        url: "#",
+        description: "وصف التطبيق الأول",
+      },
+    ],
+  },
   {
     id: 6,
     title: "تواصل معنا",
-    url: "/#contact-us",
+    url: "#contact-us",
+  },
+];
+
+export const languages = [
+  {
+    code: "en",
+    name: "English",
+  },
+  {
+    code: "ar",
+    name: "العربية",
   },
 ];

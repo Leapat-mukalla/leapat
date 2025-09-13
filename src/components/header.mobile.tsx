@@ -2,17 +2,23 @@
 
 import {
   Drawer,
-  DrawerTrigger,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
+  DrawerTrigger,
 } from "@/components/ui/drawer";
+
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 import { links } from "@/lib/constants";
+import useScroll from "@/hooks/use-scroll";
 
 export function HeaderMobile() {
+  const { y } = useScroll();
+  const scrolled = y > 80;
+
   return (
     <div className="container flex justify-between gap-4 bg-transparent">
       <Image
@@ -20,13 +26,14 @@ export function HeaderMobile() {
         width={100}
         height={60}
         alt="Leapat Logo"
+        className={cn(scrolled && "invert")}
       />
       <Drawer>
         <DrawerTrigger asChild>
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full text-white"
+            className={cn("rounded-full text-white", scrolled && "text-[#171717]")}
           >
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
