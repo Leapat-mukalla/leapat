@@ -59,9 +59,6 @@ export function HeaderDesktop() {
                         <span className="font-medium text-gray-900">
                           {item.title}
                         </span>
-                        <span className="mt-1 text-sm text-gray-500">
-                          {item.description}
-                        </span>
                       </Link>
                     </DropdownMenuItem>
                   ))}
