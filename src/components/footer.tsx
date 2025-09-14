@@ -55,7 +55,7 @@ export function Footer() {
           </Link>
         </div>
 
-        <div className="hidden flex-col items-center space-y-2 md:flex">
+        <div className="hidden flex-col items-center space-y-2 text-white md:flex">
           <div>
             <Image
               alt="leapat logo"

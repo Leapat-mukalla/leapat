@@ -44,7 +44,7 @@ export default async function ProjectDetails({
       </HeroSection>
 
       <section className="bg-background py-20 md:py-48">
-        <div className="prose mx-auto dark:prose-invert md:prose-lg lg:prose-xl xl:prose-2xl">
+        <div className="container mx-auto">
           <header className="mb-20 flex gap-5">
             <Image
               className="not-prose relative z-10 rounded-[27px] object-cover"
@@ -82,7 +82,7 @@ export default async function ProjectDetails({
                   <a
                     href={project.data.tool.url}
                     target="_blank"
-                    className="block no-underline"
+                    className="my-6 block no-underline"
                   >
                     <div className="flex h-20 cursor-pointer items-center justify-between rounded-[32px] bg-[#E8ECFB] px-8 py-2">
                       <span className="font-semibold text-[#1542D4]">
@@ -113,14 +113,15 @@ export default async function ProjectDetails({
                   </p>
                   <div className="flex flex-wrap gap-10">
                     {project.data.partners.map((logo: string, idx: number) => (
-                      <Image
-                        key={idx}
-                        src={logo}
-                        alt={`شريك ${idx + 1}`}
-                        width={100}
-                        height={100}
-                        className="object-contain"
-                      />
+                      <div className="relative h-12 w-36" key={idx}>
+                        <Image
+                          fill
+                          key={idx}
+                          src={logo}
+                          alt={`شريك ${idx + 1}`}
+                          className="object-contain"
+                        />
+                      </div>
                     ))}
                   </div>
                 </section>
@@ -140,11 +141,7 @@ export default async function ProjectDetails({
 
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {blogs.map((blog) => (
-                      <BlogCard
-                        key={blog.filePath}
-                        data={blog.data}
-                        filePath={blog.filePath}
-                      />
+                      <BlogCard {...blog} key={blog.filePath} />
                     ))}
                   </div>
                 </section>
@@ -152,7 +149,7 @@ export default async function ProjectDetails({
             </>
           ) : (
             <div
-              className="mx-auto my-20"
+              className="prose mx-auto my-20 dark:prose-invert md:prose-lg lg:prose-xl xl:prose-2xl"
               dangerouslySetInnerHTML={{ __html: project.content }}
             />
           )}
