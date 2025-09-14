@@ -11,6 +11,23 @@ export type ProjectMatter = {
     date: string;
     media: string[];
     completed?: boolean;
+    layout?: string;
+    tool?: {
+      name: string;
+      url: string;
+    };
+    partners?: string[];
+    articles?: {
+      title: string;
+      image: string;
+      date: string;
+      author: string;
+      authorTitle: string;
+      category: string;
+      tags: string[];
+      excerpt: string;
+      slug: string;
+    } []
   };
   filePath: string;
   readingTime: { text: string; minutes: number; time: number; words: number };
