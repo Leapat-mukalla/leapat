@@ -24,8 +24,7 @@ export const links = [
     dropdownItems: [
       {
         title: "تطبيق حصين",
-        url: "#",
-        description: "وصف التطبيق الأول",
+        url: "https://haseen.leapat.org",
       },
     ],
   },
