@@ -5,11 +5,11 @@ date: "2024-07-10"
 completed: false
 layout: "haseen"
 partners:
-  - "/haseen_partners/Amen.png"
-  - "/haseen_partners/Takamol.png"
-  - "/haseen_partners/Adalah_Foundation.png"
-  - "/haseen_partners/Saferworld.png"
-  - "/haseen_partners/EN_FundedbytheEU_RGB_POS.png"
+  - "/haseen_partners/amen.png"
+  - "/haseen_partners/takamol.png"
+  - "/haseen_partners/adalah_foundation.png"
+  - "/haseen_partners/saferworld.png"
+  - "/haseen_partners/en_fundedbytheeu_rgb_pos.png"
 tool:
   url: "https://haseen.leapat.org"
 media: []
