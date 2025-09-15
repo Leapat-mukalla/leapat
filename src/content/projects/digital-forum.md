@@ -3,6 +3,15 @@ title: الملتقى الرقمي
 image: /content/projects/digital-forum.png
 date: 2024-07-10
 completed: true
+media:
+  - /content/projects/digital-forum/digital-forum-1.JPG
+  - /content/projects/digital-forum/digital-forum-2.JPG
+  - /content/projects/digital-forum/digital-forum-3.JPG
+  - /content/projects/digital-forum/digital-forum-4.JPG
+  - /content/projects/digital-forum/digital-forum-5.JPG
+  - /content/projects/digital-forum/digital-forum-6.JPG
+  - /content/projects/digital-forum/digital-forum-7.JPG
+  - /content/projects/digital-forum/digital-forum-8.JPG
 ---
 
 **الشركاء:** مبادرة ديجتايز (عدن)، مركز سيئون الإبداعي (سيئون)، النادي التقني (المكلا)، مؤسسة ثري تراكس (عدن).
