@@ -1,9 +1,9 @@
-import React from 'react';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { ProjectMatter } from '@/lib/markdown';
+import React from 'react';
 import { buttonVariants } from "../ui/button";
+import { cn } from '@/lib/utils';
 
 export default function ProjectCard({
   reverse,
@@ -19,16 +19,17 @@ export default function ProjectCard({
     <div
       key={filePath}
       className={cn(
-        "mb-12 flex flex-col items-center justify-between gap-5 p-4 md:flex-row md:gap-20",
+        "mb-8 flex flex-col items-center justify-between gap-5 p-4 md:flex-row md:gap-20",
         {
           "md:flex-row-reverse": reverse,
         },
       )}
     >
-      <Link className="relative aspect-square w-full md:basis-1/2" href={url}>
+      <Link className="relative  w-full md:basis-1/2" href={url}>
         <Image
           className="relative z-10 rounded-[27px] object-contain"
-          fill
+          width={530}
+          height={370}
           src={project.image || "/image.png"}
           alt="Post Image"
         />
