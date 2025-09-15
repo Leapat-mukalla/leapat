@@ -41,10 +41,15 @@ export default function ProjectCard({
         <h1 className="mb-10 text-right text-4xl font-bold text-secondary">
           {project.title}
         </h1>
-        <p
-          className="mb-10 line-clamp-3 text-right text-[18px] text-[#999]"
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></p>
+        {project.description ? (
+          <p className="mb-10 text-right text-[18px] text-[#999]">
+            {project.description}
+          </p>
+        ) : (
+          <p className="mb-10 line-clamp-3 text-right text-[18px] text-[#999]">
+            {content}
+          </p>
+        )}
         <Link className={buttonVariants({ variant: "outline" })} href={url}>
           المزيد عن المشروع
         </Link>
