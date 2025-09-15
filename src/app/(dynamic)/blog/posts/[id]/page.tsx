@@ -16,6 +16,7 @@ import Link from "next/link";
 import React from "react";
 import RelatedBlogCard from "@/components/blog/related-blog-card";
 import { notFound } from "next/navigation";
+import PartenersSection from "@/components/parteners-section";
 
 interface BlogDetailPageProps {
   params: {
@@ -42,6 +43,17 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const relatedBlogs = allBlogs
     .filter((b) => b.filePath !== params.id)
     .slice(0, 3);
+
+  // Check if this blog is related to hassen project
+  const isHassenBlog = blog.filePath.includes('hassen') || 
+                      blog.data.tags?.some(tag => 
+                        tag.toLowerCase().includes('حصين') || 
+                        tag.toLowerCase().includes('hassen') ||
+                        tag.toLowerCase().includes('haseen')
+                      ) ||
+                      blog.data.category?.toLowerCase().includes('حصين') ||
+                      blog.data.category?.toLowerCase().includes('hassen') ||
+                      blog.data.category?.toLowerCase().includes('haseen');
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -131,6 +143,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           </div>
         </div>
       </div>
+      {isHassenBlog && <PartenersSection />}
     </div>
   );
 }
