@@ -1,15 +1,25 @@
-import { cn } from '@/lib/utils';
-
-import Link from 'next/link';
-import { ProjectsCarousel } from "./carousel";
-import ProjectCard from "./project-card";
 import { ChevronLeft } from "lucide-react";
-import { getProjects } from "@/lib/markdown";
-import { buttonVariants } from "../ui/button";
+import Link from 'next/link';
+import ProjectCard from "./project-card";
+import { ProjectsCarousel } from "./carousel";
 import { ViewportFadeIn } from "../viewport-fade-in";
+import { buttonVariants } from "../ui/button";
+import { cn } from '@/lib/utils';
+import { getProjects } from "@/lib/markdown";
 
 export async function ProjectsSection() {
-  const projects = await getProjects();
+  const allProjects = await getProjects();
+  
+  const featuredProjectPaths = [
+    'techno-sketch',
+    'ramadan-tech-evenings',
+    'tech-exhibition-capacity-building',
+  ];
+  
+  const featuredProjects = featuredProjectPaths
+    .map(path => allProjects.find(project => project.filePath === path))
+    .filter((project): project is typeof allProjects[0] => project !== undefined);
+  
   return (
     <div className="bg-white pb-20">
       <div className="pt-14">
@@ -21,11 +31,11 @@ export async function ProjectsSection() {
           مشاريعنا
           <span className="mb-2 inline-block h-[9px] w-[130px] bg-primary"></span>
         </h2>
-        <h3 className="mb-12 text-center text-6xl text-[#262626]">
-          ماذا انجزنا؟
+        <h3 className="mb-12 pt-1 text-center text-6xl text-[#262626]">
+          ماذا أنجزنا؟
         </h3>
         <div className="mx-auto max-w-[1100px]">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <ViewportFadeIn key={project.filePath}>
               <ProjectCard {...project} reverse={index % 2 === 0} />
             </ViewportFadeIn>
@@ -53,7 +63,11 @@ export async function ProjectsSection() {
         شاهدنا بدقة أعلى
       </h3>
 
-      <ProjectsCarousel images={["/image.png", "/image.png", "/image.png"]} />
+      <ProjectsCarousel images={[
+        "/content/projects/digital-forum/digital-forum-1.JPG",
+        "/content/projects/tech-exhibition/tech-exhibition-gallery-3.jpg",
+        "/content/projects/techno-sketch/techno-sketch-gallery5.jpg"
+      ]} />
     </div>
   );
 }
