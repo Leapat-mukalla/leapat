@@ -99,7 +99,7 @@ export const OurGoals = ({
           />
 
           <Image
-            src="/Woman.png"
+            src="/leapat-woman.png"
             width={400}
             height={200}
             alt="leapat woman illustration"
