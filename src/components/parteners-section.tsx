@@ -1,7 +1,12 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import getProject from "@/lib/markdown";
 
-export default function PartenersSection() {
+export default async function PartenersSection() {
+  // Fetch the hassen project data to get partner images
+  const hassenProject = await getProject("hassen");
+  const partners = hassenProject.data.partners || [];
+
   return (
     <section className="container mx-auto my-20 max-sm:mx-4">
       <div className="mb-12 text-center">
@@ -20,17 +25,10 @@ export default function PartenersSection() {
         </p>
       </div>
       <div className="mt-6 flex flex-wrap justify-center gap-10">
-        {[
-          "/haseen_partners/amen.png",
-          "/haseen_partners/takamol.png",
-          "/haseen_partners/adalah_foundation.png",
-          "/haseen_partners/saferworld.png",
-          "/haseen_partners/en_fundedbytheeu_rgb_pos.png",
-        ].map((logo: string, idx: number) => (
+        {partners.map((logo: string, idx: number) => (
           <div className="h-18 relative w-44" key={idx}>
             <Image
               fill
-              key={idx}
               src={logo}
               alt={`شريك ${idx + 1}`}
               className="object-contain"
