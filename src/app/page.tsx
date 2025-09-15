@@ -1,14 +1,14 @@
-import ContactUs from '@/components/contact-us';
-import Link from 'next/link';
 import { ChevronLeft } from "lucide-react";
-import { OurGoals } from "@/components/our-goals";
-import { Partners } from "@/components/partners";
-import TransitionTitle from "@/components/transition-title";
-import { ProjectsSection } from "@/components/projects/projects-section";
+import ContactUs from '@/components/contact-us';
 import { HeroSection } from "@/components/hero-section";
 import HeroSvg from "@/components/hero-svg";
-import { buttonVariants } from "@/components/ui/button";
+import Link from 'next/link';
+import { OurGoals } from "@/components/our-goals";
+import { Partners } from "@/components/partners";
+import { ProjectsSection } from "@/components/projects/projects-section";
+import TransitionTitle from "@/components/transition-title";
 import { ViewportFadeIn } from "@/components/viewport-fade-in";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -69,13 +69,14 @@ export default function Home() {
 
           <div className="pb-40 pt-10">
             <ViewportFadeIn>
-              <Link
+              <div></div>
+              {/* <Link
                 href="/about-us"
                 className={buttonVariants({ className: "w-80" })}
               >
                 تعرف علينا أكثر
                 <ChevronLeft className="mr-4 sm:mr-2" />
-              </Link>
+              </Link> */}
             </ViewportFadeIn>
           </div>
           <div className="py-3">
