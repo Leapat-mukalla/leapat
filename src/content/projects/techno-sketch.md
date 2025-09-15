@@ -4,7 +4,14 @@ image: /content/projects/techno-sketch.png
 date: 2024-06-29
 completed: true
 media:
- - /content/projects/techno-sketch.png
+  - /content/projects/techno-sketch/techno-sketch-gallery1.jpg
+  - /content/projects/techno-sketch/techno-sketch-gallery2.jpg
+#   - /content/projects/techno-sketch/techno-sketch-gallery3.jpg
+  - /content/projects/techno-sketch/techno-sketch-gallery4.jpg
+  - /content/projects/techno-sketch/techno-sketch-gallery5.jpg
+  - /content/projects/techno-sketch/techno-sketch-gallery6.JPG
+  - /content/projects/techno-sketch/techno-sketch-gallery7.JPG
+  - /content/projects/techno-sketch/techno-sketch-gallery8.jpg
 ---
 
 **المانح:** مؤسسة حضرموت للثقافة، المجلس الثقافي البريطاني.

@@ -3,6 +3,15 @@ title: معرض التقنية وبناء القدرات
 image: /content/projects/tech-exhibition-capacity-building.png
 date: 2024-05-15
 completed: true
+media:
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-1.jpg
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-2.jpg
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-3.jpg
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-4.jpg
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-5.jpg
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-6.jpg
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-7.jpg
+  - /content/projects/tech-exhibition/tech-exhibition-gallery-8.jpg
 ---
 
 **المانح:** مؤسسة صلة للتنمية
