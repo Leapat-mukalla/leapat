@@ -45,15 +45,17 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     .slice(0, 3);
 
   // Check if this blog is related to hassen project
-  const isHassenBlog = blog.filePath.includes('hassen') || 
-                      blog.data.tags?.some(tag => 
-                        tag.toLowerCase().includes('حصين') || 
-                        tag.toLowerCase().includes('hassen') ||
-                        tag.toLowerCase().includes('haseen')
-                      ) ||
-                      blog.data.category?.toLowerCase().includes('حصين') ||
-                      blog.data.category?.toLowerCase().includes('hassen') ||
-                      blog.data.category?.toLowerCase().includes('haseen');
+  const isHassenBlog =
+    blog.filePath.includes("hassen") ||
+    blog.data.tags?.some(
+      (tag) =>
+        tag.toLowerCase().includes("حصين") ||
+        tag.toLowerCase().includes("hassen") ||
+        tag.toLowerCase().includes("haseen"),
+    ) ||
+    blog.data.category?.toLowerCase().includes("حصين") ||
+    blog.data.category?.toLowerCase().includes("hassen") ||
+    blog.data.category?.toLowerCase().includes("haseen");
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -142,8 +144,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             </div>
           </div>
         </div>
+        {isHassenBlog && <PartenersSection />}
       </div>
-      {isHassenBlog && <PartenersSection />}
     </div>
   );
 }
