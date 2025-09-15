@@ -143,8 +143,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               </div>
             </div>
           </div>
+          {isHassenBlog && <PartenersSection />}
         </div>
-        {isHassenBlog && <PartenersSection />}
       </div>
     </div>
   );
