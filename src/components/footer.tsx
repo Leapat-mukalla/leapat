@@ -1,11 +1,11 @@
 'use client';
 
-import InstagramSvg from '@/svgs/social/instagram.svg';
 import FacebookSvg from '@/svgs/social/facebook.svg';
-import XSvg from '@/svgs/social/x.svg';
-import LinkedinSvg from '@/svgs/social/linkedin.svg';
 import Image from 'next/image';
+import InstagramSvg from '@/svgs/social/instagram.svg';
 import Link from 'next/link';
+import LinkedinSvg from '@/svgs/social/linkedin.svg';
+import XSvg from '@/svgs/social/x.svg';
 import { links } from "@/lib/constants";
 
 export function Footer() {
@@ -13,14 +13,15 @@ export function Footer() {
 
   return (
     <footer className="bg-secondary pt-8">
-      <div className="container my-4 flex flex-col-reverse items-center justify-center gap-8 md:flex-row md:items-start md:justify-between">
+      <div className="container my-4 flex lg:!items-center flex-col-reverse items-center justify-center gap-8 md:grid md:grid-cols-3 md:items-start">
         <div className="text-sm md:hidden">
           مبادرة ليبات © {currentYear}
           <br />
           جميع الحقوق محفوظة
         </div>
 
-        <div className="flex flex-row gap-3">
+        {/* Left column - Social Links */}
+        <div className="flex flex-row gap-3 pr-3   md:justify-center">
           <Link
             href="https://www.instagram.com/leapat_ye/"
             rel="noreferrer noopener"
@@ -64,14 +65,14 @@ export function Footer() {
               height={50}
             />
           </div>
-          <div>
+          <div className="text-center">
             مبادرة ليبات © {currentYear}
             <br />
             جميع الحقوق محفوظة
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 text-sm leading-9 text-white md:grid md:grid-cols-3 md:text-2xl md:font-semibold">
+        <div className="flex flex-col gap-3 text-sm leading-9 text-white md:grid md:grid-cols-3 md:text-2xl md:font-semibold md:justify-end">
           {links.map((link, index) => (
             <div key={index}>
               <Link href={link.url}>{link.title}</Link>
