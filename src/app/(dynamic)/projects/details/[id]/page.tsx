@@ -1,5 +1,3 @@
-import React from "react";
-import { HeroSection } from "@/components/hero-section";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,10 +6,13 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import getProject, { getBlogs } from "@/lib/markdown"; // ✅ جلب getBlogs
+
+import BlogCard from "@/components/blog/blog-card";
+import { HeroSection } from "@/components/hero-section";
 import Image from "next/image";
 import { ProjectsCarousel } from "@/components/projects/carousel";
-import getProject, { getBlogs } from "@/lib/markdown"; // ✅ جلب getBlogs
-import BlogCard from "@/components/blog/blog-card";
+import React from "react";
 
 export default async function ProjectDetails({
   params: { id },
@@ -45,14 +46,14 @@ export default async function ProjectDetails({
 
       <section className="bg-background py-20 md:py-48">
         <div className="container mx-auto">
-          <header className="mb-20 flex gap-5">
-            <Image
+          <header className="mb-20 gap-5 lg:pr-52  ">
+            {/* <Image
               className="not-prose relative z-10 rounded-[27px] object-cover"
               src={project.data.image || "/image.png"}
               alt={project.data.title}
               width={190}
               height={190}
-            />
+            /> */}
             <div className="mt-4">
               <span className="not-prose rounded-md bg-primary px-4 py-1 text-center text-white">
                 {project.data.completed ? "مكتمل" : "قيد الإنجاز"}
