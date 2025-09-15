@@ -1,12 +1,13 @@
 'use client';
 
-import Image from 'next/image';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
+
 import AutoScroll from 'embla-carousel-auto-scroll';
+import Image from 'next/image';
 
 const imageSources = [
   { src: "/partners/hadhramut-for-culture.png", alt: "HadhramutForCulture" },
@@ -16,6 +17,7 @@ const imageSources = [
   { src: "/partners/metafour.png", alt: "Metafour" },
   // TCHU
   { src: "/partners/tchu.png", alt: "TCHU" },
+ { src: "/partners/digitize.png", alt: "Digitize" },
 ];
 
 export const Partners = () => {
