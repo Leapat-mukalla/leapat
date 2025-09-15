@@ -9,6 +9,7 @@ export type ProjectMatter = {
     title: string;
     image: string;
     date: string;
+    description?: string;
     media: string[];
     completed?: boolean;
     layout?: string;
