@@ -3,6 +3,8 @@ title: الملتقى الرقمي
 image: /content/projects/digital-forum.png
 date: 2024-07-10
 completed: true
+description: |
+  ملتقى يجمع بين المهتمين في القطاع الفني والرقمي. عملت ليبات مع شركاءها على توفير المساحة لجمع الفنانين والفاعلين الثقافيين لتبادل المعارف عن طريق الجلسات الافتراضية التي استهدفت كلا من: عدن، المكلا، وسيئون. كما شاركت ليبات في تقديم محور تحت عنوان "تسخير الأدوات الرقمية لرفع الإنتاجية الفنية واستدامتها".
 media:
   - /content/projects/digital-forum/digital-forum-1.JPG
   - /content/projects/digital-forum/digital-forum-2.JPG

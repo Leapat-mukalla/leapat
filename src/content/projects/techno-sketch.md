@@ -3,10 +3,11 @@ title: مشروع تكنوسكيتش
 image: /content/projects/techno-sketch.png
 date: 2024-06-29
 completed: true
+description: عمل مشروع "تكنوسكتش" إلى دمج الأدوات التقنية المتقدمة مع الفنون التشكيلية، لجعل عملية الإنتاج الفني أكثر استدامة وابتكارًا. يعمل المشروع على تدريب الفنانين التشكيليين بمختلف مستوياتهم على استخدام التقنيات الحديثة والذكاء الاصطناعي كأدوات فنية، واستكشاف طرق مبتكرة لتعزيز ممارساتهم الإبداعية.
 media:
   - /content/projects/techno-sketch/techno-sketch-gallery1.jpg
   - /content/projects/techno-sketch/techno-sketch-gallery2.jpg
-#   - /content/projects/techno-sketch/techno-sketch-gallery3.jpg
+#   - /content/projects/techno-sketch/techno-sketch-gallery3.jpg same image as 2 
   - /content/projects/techno-sketch/techno-sketch-gallery4.jpg
   - /content/projects/techno-sketch/techno-sketch-gallery5.jpg
   - /content/projects/techno-sketch/techno-sketch-gallery6.JPG

@@ -3,6 +3,7 @@ title: معرض التقنية وبناء القدرات
 image: /content/projects/tech-exhibition-capacity-building.png
 date: 2024-05-15
 completed: true
+description: معرض يجمع العاملين والمهتمين بالقطاع التقني، شاركت مبادرة ليبات في المعرض من خلال ركن خاص، استعرضت فيه دورها في التحول الرقمي في القطاعات الإبداعية والثقافية في حضرموت. كما شاركت المبادرة في ندوة تقنية تناولت موضوع "استخدام الذكاء الاصطناعي في ريادة الأعمال".
 media:
   - /content/projects/tech-exhibition/tech-exhibition-gallery-1.jpg
   - /content/projects/tech-exhibition/tech-exhibition-gallery-2.jpg
