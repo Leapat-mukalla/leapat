@@ -39,10 +39,10 @@ export default function ProjectSearchForm() {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button
+         <button
           type="submit"
           disabled={isPending}
-          className="my-2 rounded-md bg-gradient px-3 text-background disabled:opacity-50"
+          className="my-2 py-1 rounded-xl bg-custom-gradient px-5 text-background disabled:opacity-50"
         >
           {isPending ? "جارٍ البحث..." : "بحث"}
         </button>
