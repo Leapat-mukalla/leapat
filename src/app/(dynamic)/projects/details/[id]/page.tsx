@@ -89,16 +89,19 @@ export default async function ProjectDetails({
                     target="_blank"
                     className="my-6 block no-underline"
                   >
-                    <div className="flex h-20 cursor-pointer items-center justify-between rounded-[32px] bg-[#E8ECFB] px-8 py-2">
-                      <span className="font-semibold text-[#1542D4]">
+                    <div className="group flex h-20 cursor-pointer items-center justify-between rounded-[32px] bg-[#E8ECFB] px-8 py-2 transition-all duration-300 hover:bg-[#1542D4] hover:shadow-lg hover:translate-y-[-2px]">
+                      <span className="font-semibold text-[#1542D4] transition-colors duration-300 group-hover:text-white">
                         جرّب الأداة الآن
                       </span>
-                      <Image
-                        src="/arrow-up-left.svg"
-                        alt="arrow"
-                        width={28}
-                        height={28}
-                      />
+                      <div className="transition-transform duration-300 group-hover:rotate-[-45deg] group-hover:scale-110">
+                        <Image
+                          src="/arrow-up-left.svg"
+                          alt="arrow"
+                          width={28}
+                          height={28}
+                          className="transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                        />
+                      </div>
                     </div>
                   </a>
                 </section>
