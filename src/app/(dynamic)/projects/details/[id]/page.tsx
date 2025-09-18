@@ -1,5 +1,3 @@
-import React from "react";
-import { HeroSection } from "@/components/hero-section";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,10 +6,13 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import getProject, { getBlogs } from "@/lib/markdown"; // ✅ جلب getBlogs
+
+import BlogCard from "@/components/blog/blog-card";
+import { HeroSection } from "@/components/hero-section";
 import Image from "next/image";
 import { ProjectsCarousel } from "@/components/projects/carousel";
-import getProject, { getBlogs } from "@/lib/markdown"; // ✅ جلب getBlogs
-import BlogCard from "@/components/blog/blog-card";
+import React from "react";
 
 export default async function ProjectDetails({
   params: { id },
@@ -71,13 +72,17 @@ export default async function ProjectDetails({
                     الأداة المطوَّرة ضمن حصين
                   </h2>
                   <p>
-                    في حصين صممنا أداة رقمية شاملة تجمع بين التوعية والفحص، بحيث
-                    تقدم للمستخدم تجربة متكاملة تساعده على حماية نفسه رقميًا.
-                    الأداة تمكّنك من التحقق بسهولة مما إذا كانت بياناتك قد ظهرت
-                    في أي تسريب معروف، وفي الوقت نفسه توفر لك مساعدًا تفاعليًا
-                    يجيب على استفساراتك ويزوّدك بخطوات عملية ونصائح وقائية.
-                    حرصنا أن تكون هذه الأداة آمنة، سريعة، وسهلة الاستخدام، لتعزز
-                    وعيك وتمنحك راحة البال بأن بياناتك في أيدٍ موثوقة.
+في حصين صممنا أداة رقمية شاملة تجمع بين جانبين أساسيين، لتمنحك تجربة متكاملة تساعدك على حماية نفسك رقميًا:                  </p>
+                  <ul className="list-disc pr-8 my-4">
+                    <li className="mb-2">
+                      <strong>أداة فحص التسريبات:</strong> للتحقق مما إذا كان بريدك الإلكتروني أو اسم المستخدم أو رقم هاتفك قد ظهر في أي تسريب بيانات معروف، مع ضمان كامل لخصوصيتك.
+                    </li>
+                    <li className="mb-2">
+                      <strong>المساعد التفاعلي:</strong> شات بوت ذكي يجيب على استفساراتك حول الأمان الرقمي والابتزاز الإلكتروني، ويقدّم لك نصائح وخطوات عملية سهلة التطبيق.
+                    </li>
+                  </ul>
+                  <p>
+                    حرصنا أن تكون هذه الأداة آمنة، سريعة، وسهلة الاستخدام، لتمنحك راحة البال بأن بياناتك في أيدٍ موثوقة.
                   </p>
                   <a
                     href={project.data.tool.url}
