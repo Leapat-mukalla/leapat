@@ -54,17 +54,6 @@ export default function Home() {
                 كما تسعى إلى الاستفادة من التكنولوجيا لبناء مجتمع أكثر وعيًا.
               </p>
             </ViewportFadeIn>
-            <ViewportFadeIn delay={900}>
-              <p className="text-2xl font-medium text-white">
-                نسعى لإحداث نقلات إلى المستقبل من خلال تحقيق تحول رقمي شامل في
-                مجالات الاقتصاد،{" "}
-              </p>
-            </ViewportFadeIn>
-            <ViewportFadeIn delay={1200}>
-              <p className="text-2xl font-medium text-white">
-                الصحة، التعليم، الثقافة، والفن.
-              </p>
-            </ViewportFadeIn>
           </div>
 
           <div className="pb-40 pt-10">
