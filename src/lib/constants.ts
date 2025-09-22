@@ -1,4 +1,12 @@
-export const links = [
+type NavLink = {
+  title: string;
+  url: string;
+  id?: number;
+  hasDropdown?: boolean;
+  dropdownItems?: { title: string; url: string }[];
+};
+
+export const links: NavLink[] = [
   {
     title: "الرئيسية",
     url: "/",
