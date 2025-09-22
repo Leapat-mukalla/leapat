@@ -14,7 +14,9 @@ interface ProjectsPageProps {
 export default async function ProjectsPage({
   searchParams,
 }: ProjectsPageProps) {
-  const allProjects = await getProjects();
+  const allProjects = (await getProjects()).filter(
+    (project) => !project.data.hidden,
+  );
   const searchQuery = searchParams.search?.toLowerCase().trim();
 
   // Filter projects based on search query

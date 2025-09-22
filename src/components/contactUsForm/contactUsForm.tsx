@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from "react";
-import React from "react";
-import { SendHorizontal, LoaderCircle } from "lucide-react";
+import { LoaderCircle, SendHorizontal } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import HeroSvg from "../hero-svg";
+import React from "react";
+import { useState } from "react";
 
 const ContactUsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -104,12 +105,14 @@ const ContactUsForm = () => {
               className="m-4"
             />
           ) : (
-            <SendHorizontal
-              height={40}
-              width={40}
-              strokeWidth={1.5}
-              className="m-4 rotate-180"
-            />
+            // <SendHorizontal
+            //   height={40}
+            //   width={40}
+            //   strokeWidth={1.5}
+              //   className="m-4 rotate-180"
+              
+              // />
+              <></>
           )}
           {isSubmitting ? "جاري الإرسال" : "إرسال"}
         </Button>
