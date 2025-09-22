@@ -4,6 +4,7 @@ image: ""
 date: "2024-07-10"
 completed: false
 layout: "haseen"
+hidden: true
 partners:
   - "/haseen_partners/amen.png"
   - "/haseen_partners/takamol.png"

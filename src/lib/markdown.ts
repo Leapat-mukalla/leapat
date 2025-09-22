@@ -6,6 +6,7 @@ import snarkdown from "snarkdown";
 
 export type ProjectMatter = {
   data: {
+    hidden?: boolean;
     title: string;
     image: string;
     date: string;
