@@ -12,22 +12,21 @@ export const links = [
     title: "المشاريع",
     url: "/projects",
   },
-  {
-    title: "المقالات",
-    url: "/blog",
-  },
-
-  {
-    title: "تطبيقاتنا",
-    url: "#",
-    hasDropdown: true,
-    dropdownItems: [
-      {
-        title: "تطبيق حصين",
-        url: "https://haseen.leapat.org",
-      },
-    ],
-  },
+  // {
+  //   title: "المقالات",
+  //   url: "/blog",
+  // },
+  // {
+  //   title: "تطبيقاتنا",
+  //   url: "#",
+  //   hasDropdown: true,
+  //   dropdownItems: [
+  //     {
+  //       title: "تطبيق حصين",
+  //       url: "https://haseen.leapat.org",
+  //     },
+  //   ],
+  // },
   {
     id: 6,
     title: "تواصل معنا",
