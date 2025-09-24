@@ -1,6 +1,6 @@
 ---
 title: "برنامج حصين"
-image: ""
+image: /content/projects/haseen.png
 date: "2024-07-10"
 completed: false
 layout: "haseen"

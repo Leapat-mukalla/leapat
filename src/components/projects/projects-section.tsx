@@ -9,17 +9,18 @@ import { getProjects } from "@/lib/markdown";
 
 export async function ProjectsSection() {
   const allProjects = await getProjects();
-  
+
   const featuredProjectPaths = [
-    'techno-sketch',
-    'ramadan-tech-evenings',
-    'tech-exhibition-capacity-building',
+    "techno-sketch",
+    "ramadan-tech-evenings",
+    "hassen",
+    "tech-exhibition-capacity-building",
   ];
-  
+
   const featuredProjects = featuredProjectPaths
     .map(path => allProjects.find(project => project.filePath === path))
     .filter((project): project is typeof allProjects[0] => project !== undefined);
-  
+
   return (
     <div className="bg-white pb-20">
       <div className="pt-14">
