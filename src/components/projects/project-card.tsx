@@ -25,7 +25,7 @@ export default function ProjectCard({
         },
       )}
     >
-      <Link className="relative  w-full md:basis-1/2" href={url}>
+      <Link className="relative w-full md:basis-1/2" href={url}>
         <Image
           className="relative z-10 rounded-[27px] object-contain"
           width={530}
@@ -47,7 +47,7 @@ export default function ProjectCard({
           </p>
         ) : (
           <p className="mb-10 line-clamp-3 text-right text-[18px] text-[#999]">
-            {content}
+            {project.excerpt || content}
           </p>
         )}
         <Link className={buttonVariants({ variant: "outline" })} href={url}>

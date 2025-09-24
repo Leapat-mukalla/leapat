@@ -10,6 +10,7 @@ export type ProjectMatter = {
     title: string;
     image: string;
     date: string;
+    excerpt?: string;
     description?: string;
     media: string[];
     completed?: boolean;
@@ -29,7 +30,7 @@ export type ProjectMatter = {
       tags: string[];
       excerpt: string;
       slug: string;
-    } []
+    }[];
   };
   filePath: string;
   readingTime: { text: string; minutes: number; time: number; words: number };
@@ -42,6 +43,7 @@ export type BlogMatter = {
     image: string;
     date: string;
     author: string;
+    authorAvatar: string;
     authorTitle: string;
     category: string;
     tags: string[];
@@ -93,6 +95,10 @@ export async function getBlogs() {
     const filePath = path.join(directoryPath, file);
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data, content } = fm(fileContent);
+
+    if (data.draft) {
+      continue; // Skip draft blogs
+    }
 
     if (!data.date) {
       throw new Error(`${data.title} should have date`);

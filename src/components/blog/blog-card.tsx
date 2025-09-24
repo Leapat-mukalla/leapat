@@ -7,6 +7,7 @@ interface BlogCardProps {
     image: string;
     title: string;
     author: string;
+    authorAvatar: string;
     authorTitle: string;
     date: string;
     excerpt: string;
@@ -21,7 +22,7 @@ function formatDate(dateString: string) {
 export default function BlogCard({ data, filePath }: BlogCardProps) {
   const url = `/blog/posts/${filePath}`;
   return (
-    <div className="group overflow-hidden  rounded-tr-3xl rounded-tl-3xl bg-white duration-300 hover:shadow-sm">
+    <div className="group overflow-hidden rounded-tl-3xl rounded-tr-3xl bg-white duration-300 hover:shadow-sm">
       <div className="relative h-48 w-full overflow-hidden">
         <Image
           src={data.image || "/placeholder.svg"}
@@ -31,10 +32,18 @@ export default function BlogCard({ data, filePath }: BlogCardProps) {
         />
       </div>
 
-        <div className="p-6" dir="rtl">
+      <div className="p-6" dir="rtl">
         <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gray-200"></div>
+            <div className="h-10 w-10 overflow-hidden rounded-full">
+              <Image
+                src={data.authorAvatar || "/placeholder.svg"}
+                alt={data.author}
+                width={40}
+                height={40}
+                className="h-full w-full object-cover"
+              />
+            </div>
             <div>
               <div className="text-sm font-semibold text-gray-900">
                 {data.author}
@@ -46,10 +55,7 @@ export default function BlogCard({ data, filePath }: BlogCardProps) {
         </div>
 
         <h2 className="mb-3 line-clamp-2 text-lg font-bold text-gray-900">
-          <Link
-            href={url}
-            className="transition-colors hover:text-blue-600"
-          >
+          <Link href={url} className="transition-colors hover:text-blue-600">
             {data.title}
           </Link>
         </h2>

@@ -7,6 +7,7 @@ interface RelatedBlogCardProps {
     image: string;
     title: string;
     author: string;
+    authorAvatar: string;
     authorTitle: string;
     date: string;
     excerpt: string;
@@ -38,7 +39,15 @@ export default function RelatedBlogCard({
       <div className="p-6" dir="rtl">
         <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gray-200"></div>
+            <div className="h-10 w-10 overflow-hidden rounded-full">
+              <Image
+                src={data.authorAvatar || "/placeholder.svg"}
+                alt={data.author}
+                width={40}
+                height={40}
+                className="h-full w-full object-cover"
+              />
+            </div>
             <div>
               <div className="text-sm font-semibold text-gray-900">
                 {data.author}

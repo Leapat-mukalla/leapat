@@ -104,13 +104,21 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             <div className="p-5 lg:col-span-3">
               <div className="mb-8 flex items-start justify-between gap-4">
                 <div className="flex items-center justify-center">
-                  <div className="h-16 w-16 flex-shrink-0 rounded-full bg-gray-300"></div>
+                  <div className="h-16 w-16 flex-shrink-0 overflow-hidden rounded-full">
+                    <Image
+                      src={blog.data.authorAvatar || "/placeholder.svg"}
+                      alt={blog.data.author}
+                      width={64}
+                      height={64}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                   <div className="pr-2">
                     <h2 className="mb-1 text-2xl font-bold text-[#171717]">
                       {blog.data.author}
                     </h2>
                     <p className="text-sm text-[#646464]">
-                      خبير الأمن السيبراني
+                      {blog.data.authorTitle || "خبير الأمن السيبراني"}
                     </p>
                   </div>
                 </div>
@@ -134,7 +142,9 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
                       key={relatedBlog.filePath}
                       data={{
                         ...relatedBlog.data,
-                        authorTitle: "خبير الأمن السيبراني",
+                        authorTitle:
+                          relatedBlog.data.authorTitle ||
+                          "خبير الأمن السيبراني",
                       }}
                       filePath={relatedBlog.filePath}
                     />

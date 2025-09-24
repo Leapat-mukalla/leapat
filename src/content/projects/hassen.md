@@ -4,7 +4,7 @@ image: ""
 date: "2024-07-10"
 completed: false
 layout: "haseen"
-hidden: true
+hidden: false
 partners:
   - "/haseen_partners/amen.png"
   - "/haseen_partners/takamol.png"
@@ -23,6 +23,7 @@ articles:
     author: "م. أيمن القاضي"
     date: "2025-04-02"
     slug: "10-cyber-steps"
+excerpt: برنامج حصين هو مبادرة تهدف إلى تعزيز الأمان الرقمي وحماية الأفراد من مخاطر الابتزاز الإلكتروني.
 ---
 
 ## نبذة عامة
