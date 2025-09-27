@@ -1,7 +1,7 @@
 ---
 title: "هويتك الرقمية في خطر: كيف تحمي بياناتك وحساباتك الإلكترونية"
 image: "/blog/digital-identity-protection.jpg"
-date: "2024-12-10"
+date: "2025-09-25"
 author: "فارس بن دهول"
 authorAvatar: "/blog/faris.jpeg"
 authorTitle: "خبير أمن سيبراني"
