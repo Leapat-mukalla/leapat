@@ -1,7 +1,7 @@
 ---
 title: "تسريب البيانات… دروس قاسية من الماضي لحماية المستقبل"
 image: "/blog/data-breach-handling.jpg"
-date: "2025-09-25"
+date: "2025-09-24"
 author: "عبدالله باغوث"
 authorAvatar: "/blog/abdu.jpeg"
 authorTitle: "خبير أمن سيبراني"

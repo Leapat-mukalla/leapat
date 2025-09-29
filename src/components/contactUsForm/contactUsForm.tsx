@@ -6,6 +6,11 @@ import { Button } from "@/components/ui/button";
 import HeroSvg from "../hero-svg";
 import React from "react";
 import { useState } from "react";
+import {
+  trackContactFormSubmit,
+  trackContactFormSuccess,
+  trackContactFormError,
+} from "@/lib/analytics";
 
 const ContactUsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,6 +26,13 @@ const ContactUsForm = () => {
       const formData = new FormData(e.target as HTMLFormElement);
       const formProps = Object.fromEntries(formData);
 
+      // Track form submission
+      trackContactFormSubmit({
+        name: formProps.name as string,
+        email: formProps.email as string,
+        phone: formProps.phone as string,
+      });
+
       // Insert form data into Supabase contacts table
       // const { error } = await supabase.from('contacts').insert([{ formProps }]);
 
@@ -28,13 +40,16 @@ const ContactUsForm = () => {
       // throw new Error(error.message);
       // }
 
+      // Track successful form submission
+      trackContactFormSuccess("contact");
       setIsModalOpen(true);
     } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message);
-      } else {
-        setError("An unknown error occurred.");
-      }
+      const errorMessage =
+        err instanceof Error ? err.message : "An unknown error occurred.";
+      setError(errorMessage);
+
+      // Track form error
+      trackContactFormError(errorMessage, "contact");
     } finally {
       setIsSubmitting(false);
     }
@@ -109,10 +124,10 @@ const ContactUsForm = () => {
             //   height={40}
             //   width={40}
             //   strokeWidth={1.5}
-              //   className="m-4 rotate-180"
-              
-              // />
-              <></>
+            //   className="m-4 rotate-180"
+
+            // />
+            <></>
           )}
           {isSubmitting ? "جاري الإرسال" : "إرسال"}
         </Button>

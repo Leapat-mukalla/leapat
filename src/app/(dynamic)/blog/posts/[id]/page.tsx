@@ -10,6 +10,7 @@ import {
 import { getBlog, getBlogs } from "@/lib/markdown";
 
 import BlogCard from "@/components/blog/blog-card";
+import { BlogTracker } from "@/components/blog/BlogTracker";
 import { HeroSection } from "@/components/hero-section";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,6 +69,12 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
   return (
     <div className="min-h-screen">
+      {/* Blog Analytics Tracker */}
+      <BlogTracker
+        blogTitle={blog.data.title}
+        category={blog.data.category || "general"}
+      />
+
       <HeroSection
         showLogo={false}
         className="min-h-64"

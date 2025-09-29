@@ -1,7 +1,7 @@
 ---
 title: "كيف تتصرف في حال تعرضك للابتزاز الإلكتروني؟"
 image: "/blog/cyber-extortion-handling.png"
-date: "2025-09-25"
+date: "2025-09-24"
 author: "سعيد بن مخاشن"
 authorAvatar: "/blog/s.bin.jpeg"
 authorTitle: "باحث قانوني"
